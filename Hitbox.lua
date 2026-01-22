@@ -1,597 +1,522 @@
---[=[
- d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
-88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
-88      88    88    88            odD'      88      88    88 88ooo88 
-88  ooo 88    88    88          .88'        88      88    88 88~~~88 
-88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
- Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
-]=]
-
--- Instances: 38 | Scripts: 1 | Modules: 0 | Tags: 0
-local G2L = {};
-
--- StarterGui.GhipsX
-G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
-G2L["1"]["IgnoreGuiInset"] = true;
-G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
-G2L["1"]["Name"] = [[GhipsX]];
-G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-
-
--- StarterGui.GhipsX.Frame
-G2L["2"] = Instance.new("Frame", G2L["1"]);
-G2L["2"]["BorderSizePixel"] = 0;
-G2L["2"]["BackgroundColor3"] = Color3.fromRGB(19, 19, 19);
-G2L["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["2"]["Size"] = UDim2.new(0.29801, 0, 0.31969, 0);
-G2L["2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-
-
--- StarterGui.GhipsX.Frame.LocalScript
-G2L["3"] = Instance.new("LocalScript", G2L["2"]);
-
-
-
--- StarterGui.GhipsX.Frame.UICorner
-G2L["4"] = Instance.new("UICorner", G2L["2"]);
-
-
-
--- StarterGui.GhipsX.Frame.Nada
-G2L["5"] = Instance.new("Frame", G2L["2"]);
-G2L["5"]["BorderSizePixel"] = 0;
-G2L["5"]["BackgroundColor3"] = Color3.fromRGB(38, 0, 58);
-G2L["5"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["5"]["Size"] = UDim2.new(0.00222, 0, 0.892, 0);
-G2L["5"]["Position"] = UDim2.new(0.58667, 0, 0.5, 0);
-G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5"]["Name"] = [[Nada]];
-
-
--- StarterGui.GhipsX.Frame.Nada.UICorner
-G2L["6"] = Instance.new("UICorner", G2L["5"]);
-
-
-
--- StarterGui.GhipsX.Frame.Titulo
-G2L["7"] = Instance.new("TextLabel", G2L["2"]);
-G2L["7"]["TextWrapped"] = true;
-G2L["7"]["BorderSizePixel"] = 0;
-G2L["7"]["TextSize"] = 14;
-G2L["7"]["TextScaled"] = true;
-G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7"]["BackgroundTransparency"] = 1;
-G2L["7"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["7"]["Size"] = UDim2.new(0.32, 0, 0.132, 0);
-G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7"]["Text"] = [[GHIPSX]];
-G2L["7"]["Name"] = [[Titulo]];
-G2L["7"]["Position"] = UDim2.new(0.29823, 0, 0.346, 0);
-
-
--- StarterGui.GhipsX.Frame.ImageLabel
-G2L["8"] = Instance.new("ImageLabel", G2L["2"]);
-G2L["8"]["BorderSizePixel"] = 0;
-G2L["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["8"]["Image"] = [[rbxassetid://129931686467420]];
-G2L["8"]["Size"] = UDim2.new(0.22222, 0, 0.4, 0);
-G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8"]["BackgroundTransparency"] = 1;
-G2L["8"]["Position"] = UDim2.new(0.29944, 0, 0.198, 0);
-
-
--- StarterGui.GhipsX.Frame.Descripcion
-G2L["9"] = Instance.new("TextLabel", G2L["2"]);
-G2L["9"]["TextWrapped"] = true;
-G2L["9"]["BorderSizePixel"] = 0;
-G2L["9"]["TextSize"] = 14;
-G2L["9"]["TextScaled"] = true;
-G2L["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["9"]["TextColor3"] = Color3.fromRGB(90, 86, 94);
-G2L["9"]["BackgroundTransparency"] = 1;
-G2L["9"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["9"]["Size"] = UDim2.new(0.32667, 0, 0.044, 0);
-G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["9"]["Text"] = [[Key System]];
-G2L["9"]["Name"] = [[Descripcion]];
-G2L["9"]["Position"] = UDim2.new(0.29764, 0, 0.434, 0);
-
-
--- StarterGui.GhipsX.Frame.Submit
-G2L["a"] = Instance.new("TextButton", G2L["2"]);
-G2L["a"]["BorderSizePixel"] = 0;
-G2L["a"]["TextSize"] = 14;
-G2L["a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a"]["BackgroundColor3"] = Color3.fromRGB(135, 13, 255);
-G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["a"]["Size"] = UDim2.new(0.22222, 0, 0.16, 0);
-G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a"]["Text"] = [[]];
-G2L["a"]["Name"] = [[Submit]];
-G2L["a"]["Position"] = UDim2.new(0.15556, 0, 0.816, 0);
-
-
--- StarterGui.GhipsX.Frame.Submit.UICorner
-G2L["b"] = Instance.new("UICorner", G2L["a"]);
-G2L["b"]["CornerRadius"] = UDim.new(0, 5);
-
-
--- StarterGui.GhipsX.Frame.Submit.TextLabel
-G2L["c"] = Instance.new("TextLabel", G2L["a"]);
-G2L["c"]["TextWrapped"] = true;
-G2L["c"]["BorderSizePixel"] = 0;
-G2L["c"]["TextSize"] = 14;
-G2L["c"]["TextScaled"] = true;
-G2L["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["c"]["BackgroundTransparency"] = 1;
-G2L["c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["c"]["Size"] = UDim2.new(0.8, 0, 0.35, 0);
-G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c"]["Text"] = [[SUBMIT]];
-G2L["c"]["Position"] = UDim2.new(0.495, 0, 0.5, 0);
-
-
--- StarterGui.GhipsX.Frame.Submit.TextLabel.UIStroke
-G2L["d"] = Instance.new("UIStroke", G2L["c"]);
-G2L["d"]["Color"] = Color3.fromRGB(176, 139, 183);
-
-
--- StarterGui.GhipsX.Frame.Submit.UIStroke
-G2L["e"] = Instance.new("UIStroke", G2L["a"]);
-G2L["e"]["Thickness"] = 1.15;
-G2L["e"]["Color"] = Color3.fromRGB(130, 0, 177);
-G2L["e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-
-
--- StarterGui.GhipsX.Frame.GetKey
-G2L["f"] = Instance.new("TextButton", G2L["2"]);
-G2L["f"]["BorderSizePixel"] = 0;
-G2L["f"]["TextSize"] = 14;
-G2L["f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
-G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["f"]["Size"] = UDim2.new(0.22222, 0, 0.16, 0);
-G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f"]["Text"] = [[]];
-G2L["f"]["Name"] = [[GetKey]];
-G2L["f"]["Position"] = UDim2.new(0.44444, 0, 0.816, 0);
-
-
--- StarterGui.GhipsX.Frame.GetKey.UICorner
-G2L["10"] = Instance.new("UICorner", G2L["f"]);
-G2L["10"]["CornerRadius"] = UDim.new(0, 5);
-
-
--- StarterGui.GhipsX.Frame.GetKey.UIStroke
-G2L["11"] = Instance.new("UIStroke", G2L["f"]);
-G2L["11"]["Thickness"] = 0.41;
-G2L["11"]["Color"] = Color3.fromRGB(125, 125, 125);
-G2L["11"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-
-
--- StarterGui.GhipsX.Frame.GetKey.TextLabel
-G2L["12"] = Instance.new("TextLabel", G2L["f"]);
-G2L["12"]["TextWrapped"] = true;
-G2L["12"]["BorderSizePixel"] = 0;
-G2L["12"]["TextSize"] = 14;
-G2L["12"]["TextScaled"] = true;
-G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["12"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["12"]["BackgroundTransparency"] = 1;
-G2L["12"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["12"]["Size"] = UDim2.new(0.8, 0, 0.35, 0);
-G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["12"]["Text"] = [[GET KEY]];
-G2L["12"]["Position"] = UDim2.new(0.495, 0, 0.5, 0);
-
-
--- StarterGui.GhipsX.Frame.Cadro
-G2L["13"] = Instance.new("Frame", G2L["2"]);
-G2L["13"]["BorderSizePixel"] = 0;
-G2L["13"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
-G2L["13"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["13"]["Size"] = UDim2.new(0.51111, 0, 0.16, 0);
-G2L["13"]["Position"] = UDim2.new(0.3, 0, 0.62, 0);
-G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["13"]["Name"] = [[Cadro]];
-
-
--- StarterGui.GhipsX.Frame.Cadro.UICorner
-G2L["14"] = Instance.new("UICorner", G2L["13"]);
-G2L["14"]["CornerRadius"] = UDim.new(0, 5);
-
-
--- StarterGui.GhipsX.Frame.Cadro.UIStroke
-G2L["15"] = Instance.new("UIStroke", G2L["13"]);
-G2L["15"]["Thickness"] = 0.41;
-G2L["15"]["Color"] = Color3.fromRGB(125, 125, 125);
-G2L["15"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-
-
--- StarterGui.GhipsX.Frame.Cadro.EnterKey
-G2L["16"] = Instance.new("TextBox", G2L["13"]);
-G2L["16"]["Name"] = [[EnterKey]];
-G2L["16"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["16"]["BorderSizePixel"] = 0;
-G2L["16"]["TextSize"] = 12;
-G2L["16"]["TextColor3"] = Color3.fromRGB(105, 105, 105);
-G2L["16"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["16"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["16"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["16"]["Size"] = UDim2.new(0.82609, 0, 0.5, 0);
-G2L["16"]["Position"] = UDim2.new(0.49126, 0, 0.485, 0);
-G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["16"]["Text"] = [[Enter your key here..]];
-G2L["16"]["BackgroundTransparency"] = 1;
-
-
--- StarterGui.GhipsX.Frame.Notice
-G2L["17"] = Instance.new("TextLabel", G2L["2"]);
-G2L["17"]["TextWrapped"] = true;
-G2L["17"]["BorderSizePixel"] = 0;
-G2L["17"]["TextSize"] = 14;
-G2L["17"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["17"]["TextScaled"] = true;
-G2L["17"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["17"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["17"]["TextColor3"] = Color3.fromRGB(90, 86, 94);
-G2L["17"]["BackgroundTransparency"] = 1;
-G2L["17"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["17"]["Size"] = UDim2.new(0.32667, 0, 0.044, 0);
-G2L["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["17"]["Text"] = [[Notice]];
-G2L["17"]["Name"] = [[Notice]];
-G2L["17"]["Position"] = UDim2.new(0.22875, 0, 0.498, 0);
-
-
--- StarterGui.GhipsX.Frame.ImageLabel
-G2L["18"] = Instance.new("ImageLabel", G2L["2"]);
-G2L["18"]["ZIndex"] = 0;
-G2L["18"]["BorderSizePixel"] = 0;
-G2L["18"]["BackgroundColor3"] = Color3.fromRGB(209, 20, 255);
-G2L["18"]["ImageColor3"] = Color3.fromRGB(179, 45, 255);
-G2L["18"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["18"]["Image"] = [[rbxassetid://4996891970]];
-G2L["18"]["Size"] = UDim2.new(1.10431, 0, 1.104, 0);
-G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["18"]["BackgroundTransparency"] = 1;
-G2L["18"]["Position"] = UDim2.new(0.50033, 0, 0.498, 0);
-
-
--- StarterGui.GhipsX.Frame.Descripcion
-G2L["19"] = Instance.new("TextLabel", G2L["2"]);
-G2L["19"]["TextWrapped"] = true;
-G2L["19"]["BorderSizePixel"] = 0;
-G2L["19"]["TextSize"] = 14;
-G2L["19"]["TextScaled"] = true;
-G2L["19"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["19"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["19"]["TextColor3"] = Color3.fromRGB(155, 54, 255);
-G2L["19"]["BackgroundTransparency"] = 1;
-G2L["19"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["19"]["Size"] = UDim2.new(0.33556, 0, 0.052, 0);
-G2L["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["19"]["Text"] = [[¿How do I get the key?]];
-G2L["19"]["Name"] = [[Descripcion]];
-G2L["19"]["Position"] = UDim2.new(0.78685, 0, 0.078, 0);
-
-
--- StarterGui.GhipsX.Frame.Descripcion
-G2L["1a"] = Instance.new("TextLabel", G2L["2"]);
-G2L["1a"]["TextWrapped"] = true;
-G2L["1a"]["BorderSizePixel"] = 0;
-G2L["1a"]["TextSize"] = 14;
-G2L["1a"]["TextScaled"] = true;
-G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["1a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1a"]["BackgroundTransparency"] = 1;
-G2L["1a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["1a"]["Size"] = UDim2.new(0.33556, 0, 0.264, 0);
-G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1a"]["Text"] = [[To obtain your key, click the GET KEY button. This will automatically copy a link to your clipboard. Paste the link into your web browser and follow the instructions provided.]];
-G2L["1a"]["Name"] = [[Descripcion]];
-G2L["1a"]["Position"] = UDim2.new(0.78685, 0, 0.264, 0);
-
-
--- StarterGui.GhipsX.Frame.Descripcion
-G2L["1b"] = Instance.new("TextLabel", G2L["2"]);
-G2L["1b"]["TextWrapped"] = true;
-G2L["1b"]["BorderSizePixel"] = 0;
-G2L["1b"]["TextSize"] = 14;
-G2L["1b"]["TextScaled"] = true;
-G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["1b"]["TextColor3"] = Color3.fromRGB(155, 54, 255);
-G2L["1b"]["BackgroundTransparency"] = 1;
-G2L["1b"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["1b"]["Size"] = UDim2.new(0.33556, 0, 0.184, 0);
-G2L["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1b"]["Text"] = [[If you encounter any bugs or problems, please contact us through our social media channels.]];
-G2L["1b"]["Name"] = [[Descripcion]];
-G2L["1b"]["Position"] = UDim2.new(0.78685, 0, 0.504, 0);
-
-
--- StarterGui.GhipsX.Frame.ImageLabel
-G2L["1c"] = Instance.new("ImageLabel", G2L["2"]);
-G2L["1c"]["BorderSizePixel"] = 0;
-G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["1c"]["Image"] = [[rbxassetid://121079734659925]];
-G2L["1c"]["Size"] = UDim2.new(0.06671, 0, 0.12, 0);
-G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1c"]["Position"] = UDim2.new(0.65038, 0, 0.704, 0);
-
-
--- StarterGui.GhipsX.Frame.ImageLabel.UICorner
-G2L["1d"] = Instance.new("UICorner", G2L["1c"]);
-
-
-
--- StarterGui.GhipsX.Frame.ImageLabel
-G2L["1e"] = Instance.new("ImageLabel", G2L["2"]);
-G2L["1e"]["BorderSizePixel"] = 0;
-G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["1e"]["Image"] = [[rbxassetid://742578299]];
-G2L["1e"]["Size"] = UDim2.new(0.06671, 0, 0.12, 0);
-G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1e"]["Position"] = UDim2.new(0.7867, 0, 0.704, 0);
-
-
--- StarterGui.GhipsX.Frame.ImageLabel.UICorner
-G2L["1f"] = Instance.new("UICorner", G2L["1e"]);
-
-
-
--- StarterGui.GhipsX.Frame.ImageLabel
-G2L["20"] = Instance.new("ImageLabel", G2L["2"]);
-G2L["20"]["BorderSizePixel"] = 0;
-G2L["20"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["20"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["20"]["Image"] = [[rbxassetid://13484974997]];
-G2L["20"]["Size"] = UDim2.new(0.06671, 0, 0.12, 0);
-G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["20"]["Position"] = UDim2.new(0.91974, 0, 0.704, 0);
-
-
--- StarterGui.GhipsX.Frame.ImageLabel.UICorner
-G2L["21"] = Instance.new("UICorner", G2L["20"]);
-
-
-
--- StarterGui.GhipsX.Frame.Descripcion
-G2L["22"] = Instance.new("TextLabel", G2L["2"]);
-G2L["22"]["TextWrapped"] = true;
-G2L["22"]["BorderSizePixel"] = 0;
-G2L["22"]["TextSize"] = 14;
-G2L["22"]["TextScaled"] = true;
-G2L["22"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["22"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["22"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["22"]["BackgroundTransparency"] = 1;
-G2L["22"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["22"]["Size"] = UDim2.new(0.33556, 0, 0.052, 0);
-G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["22"]["Text"] = [[GhipsX]];
-G2L["22"]["Name"] = [[Descripcion]];
-G2L["22"]["Position"] = UDim2.new(0.78685, 0, 0.79, 0);
-
-
--- StarterGui.GhipsX.Frame.Descripcion
-G2L["23"] = Instance.new("TextLabel", G2L["2"]);
-G2L["23"]["TextWrapped"] = true;
-G2L["23"]["BorderSizePixel"] = 0;
-G2L["23"]["TextSize"] = 14;
-G2L["23"]["TextScaled"] = true;
-G2L["23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["23"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["23"]["BackgroundTransparency"] = 1;
-G2L["23"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["23"]["Size"] = UDim2.new(0.33556, 0, 0.052, 0);
-G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["23"]["Text"] = [[GhipsX]];
-G2L["23"]["Name"] = [[Descripcion]];
-G2L["23"]["Position"] = UDim2.new(0.91805, 0, 0.79, 0);
-
-
--- StarterGui.GhipsX.Frame.Descripcion
-G2L["24"] = Instance.new("TextLabel", G2L["2"]);
-G2L["24"]["TextWrapped"] = true;
-G2L["24"]["BorderSizePixel"] = 0;
-G2L["24"]["TextSize"] = 14;
-G2L["24"]["TextScaled"] = true;
-G2L["24"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["24"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["24"]["BackgroundTransparency"] = 1;
-G2L["24"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["24"]["Size"] = UDim2.new(0.33556, 0, 0.052, 0);
-G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["24"]["Text"] = [[GhipsX]];
-G2L["24"]["Name"] = [[Descripcion]];
-G2L["24"]["Position"] = UDim2.new(0.64898, 0, 0.79, 0);
-
-
--- StarterGui.GhipsX.Frame.Descripcion
-G2L["25"] = Instance.new("TextLabel", G2L["2"]);
-G2L["25"]["TextWrapped"] = true;
-G2L["25"]["BorderSizePixel"] = 0;
-G2L["25"]["TextSize"] = 14;
-G2L["25"]["TextScaled"] = true;
-G2L["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["25"]["TextColor3"] = Color3.fromRGB(255, 255, 128);
-G2L["25"]["BackgroundTransparency"] = 1;
-G2L["25"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["25"]["Size"] = UDim2.new(0.33556, 0, 0.052, 0);
-G2L["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["25"]["Text"] = [[Thank you for using the script]];
-G2L["25"]["Name"] = [[Descripcion]];
-G2L["25"]["Position"] = UDim2.new(0.78685, 0, 0.918, 0);
-
-
--- StarterGui.GhipsX.UIAspectRatioConstraint
-G2L["26"] = Instance.new("UIAspectRatioConstraint", G2L["1"]);
-
-
-
--- StarterGui.GhipsX.Frame.LocalScript
-local function C_3()
-local script = G2L["3"];
-	local TweenService = game:GetService("TweenService")
-	local frame = script.Parent -- El Frame principal
-	
-	-- --- REFERENCIAS ---
-	local noticeLabel = frame:WaitForChild("Notice") 
-	local inputBox = frame:WaitForChild("Cadro"):WaitForChild("EnterKey")
-	local submitBtn = frame:WaitForChild("Submit")
-	local getKeyBtn = frame:WaitForChild("GetKey")
-	
-	-- =================================================================
-	--  CONFIGURACIÓN PRINCIPAL
-	-- =================================================================
-	local CLAVE_REAL = "ESORPSLAWIMOFDAIOMAF" 
-	local LINK_KEY = "https://pastefy.app/0J80iNQg/raw" 
-	
-	-- TU SCRIPT EXACTO A EJECUTAR:
-	local URL_SCRIPT = "https://pastefy.app/n8hf8Wyf/raw"
-	
-	-- --- TIEMPOS ---
-	local TIEMPO_ERROR = 2   -- Tiempo que dura el mensaje de error
-	local TIEMPO_EXITO = 0.5 -- Tiempo de espera antes de cerrar
-	
-	-- --- ESTILO INICIAL ---
-	inputBox.PlaceholderText = "Enter your key here.."
-	inputBox.PlaceholderColor3 = Color3.fromRGB(104, 104, 104)
-	inputBox.Text = "" 
-	noticeLabel.Text = "" 
-	
-	-- =================================================================
-	--  ANIMACIONES
-	-- =================================================================
-	
-	local function animarClick(objeto)
-		local tamanoOriginal = objeto.Size
-		local tweenInfo1 = TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-		local encoger = TweenService:Create(objeto, tweenInfo1, {Size = UDim2.new(tamanoOriginal.X.Scale * 0.9, 0, tamanoOriginal.Y.Scale * 0.9, 0)})
-		encoger:Play()
-		encoger.Completed:Wait()
-		local tweenInfo2 = TweenInfo.new(0.3, Enum.EasingStyle.Back, Enum.EasingDirection.Out)
-		local crecer = TweenService:Create(objeto, tweenInfo2, {Size = tamanoOriginal})
-		crecer:Play()
-	end
-	
-	local function animarError(objeto)
-		local posOriginal = objeto.Position
-		local fuerza = 0.01 
-		for i = 1, 4 do
-			objeto.Position = UDim2.new(posOriginal.X.Scale + fuerza, 0, posOriginal.Y.Scale, 0)
-			task.wait(0.04)
-			objeto.Position = UDim2.new(posOriginal.X.Scale - fuerza, 0, posOriginal.Y.Scale, 0)
-			task.wait(0.04)
-		end
-		objeto.Position = posOriginal 
-	end
-	
-	local function cerrarConEstiloPro()
-		local infoTween = TweenInfo.new(0.8, Enum.EasingStyle.Back, Enum.EasingDirection.In)
-		local objetivo = {Size = UDim2.new(0, 0, 0, 0), BackgroundTransparency = 1}
-	
-		for _, elemento in pairs(frame:GetDescendants()) do
-			if elemento:IsA("GuiObject") then
-				local infoRapido = TweenInfo.new(0.3)
-				pcall(function() TweenService:Create(elemento, infoRapido, {BackgroundTransparency=1, TextTransparency=1, ImageTransparency=1}):Play() end)
-			end
-		end
-	
-		local tweenSalida = TweenService:Create(frame, infoTween, objetivo)
-		tweenSalida:Play()
-		tweenSalida.Completed:Wait()
-		frame.Visible = false 
-	end
-	
-	local function mostrarAviso(texto, color)
-		noticeLabel.Text = texto
-		noticeLabel.TextColor3 = color
-	end
-	
-	-- =================================================================
-	--  LÓGICA FUNCIONAL
-	-- =================================================================
-	
-	-- --- BOTÓN: GET KEY ---
-	getKeyBtn.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-			animarClick(getKeyBtn)
-	
-			local exito, _ = pcall(function()
-				if setclipboard then setclipboard(LINK_KEY) return true
-				elseif toclipboard then toclipboard(LINK_KEY) return true
-				else error("No clipboard") end
-			end)
-	
-			if exito then
-				mostrarAviso("¡Link copied to clipboard!", Color3.fromRGB(0, 255, 0))
-			else
-				inputBox.Text = LINK_KEY
-				mostrarAviso("Copy the link (Ctrl + C)", Color3.fromRGB(255, 255, 0))
-				inputBox:CaptureFocus() 
-				inputBox.CursorPosition = #inputBox.Text + 1
-			end
-		end
-	end)
-	
-	-- --- BOTÓN: SUBMIT (EJECUCIÓN REAL) ---
-	submitBtn.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-			animarClick(submitBtn)
-	
-			if inputBox.Text == CLAVE_REAL then
-				-- === CLAVE CORRECTA ===
-				mostrarAviso("Correct Key! Running...", Color3.fromRGB(0, 255, 0))
-				task.wait(TIEMPO_EXITO) 
-	
-				-- 1. Cerramos la interfaz con animación
-				cerrarConEstiloPro()
-	
-				-- 2. EJECUTAMOS TU SCRIPT
-				task.spawn(function()
-					local success, err = pcall(function()
-						loadstring(game:HttpGet(URL_SCRIPT))()
-					end)
-	
-					if not success then
-						warn("Error loading script: " .. tostring(err))
-					else
-						print("GhipsX script loaded successfully.")
-					end
-				end)
-	
-			else
-				-- === CLAVE INCORRECTA ===
-				mostrarAviso("Incorrect Key", Color3.fromRGB(255, 0, 0)) 
-				inputBox.Text = "" 
-				task.spawn(function() animarError(inputBox) end) -- Temblor
-	
-				task.delay(TIEMPO_ERROR, function()
-					if noticeLabel.Text == "Incorrect Key" then noticeLabel.Text = "" end
-				end)
-			end
-		end
-	end)
+-- :)
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+
+local LocalPlayer = Players.LocalPlayer
+
+local HITBOX_SIZE = 7
+local HITBOX_TRANSPARENCY = 0.75
+
+-- Store original head properties so we can restore them later
+-- keyed by player.UserId
+local savedHumanoidRootPartProps = {}
+
+local function saveHumanoidRootPartProps(player)
+    pcall(function()
+        if not player or not player.Character then return end
+        local HumanoidRootPart  = player.Character:FindFirstChild("HumanoidRootPart")
+        if not HumanoidRootPart  then return end
+        local uid = player.UserId
+        if not savedHeadProps[uid] then
+            savedHeadProps[uid] = {
+                Size = HumanoidRootPart.Size,
+                Transparency = HumanoidRootPart.Transparency,
+                BrickColor = HumanoidRootPart.BrickColor,
+                Material = HumanoidRootPart.Material,
+                CanCollide = HumanoidRootPart.CanCollide,
+                Massless = HumanoidRootPart.Massless,
+            }
+        end
+    end)
+end
+
+local function restoreHumanoidRootPartProps(player)
+    pcall(function()
+        if not player then return end
+        local uid = player.UserId
+        local props = savedHumanoidRootPartProps[uid]
+        if not props then return end
+        if player.Character then
+            local head = player.Character:FindFirstChild("HumanoidRootPart")
+            if head then
+                -- restore safely
+                if props.Size then pcall(function() HumanoidRootPart.Size = props.Size end) end
+                if props.Transparency ~= nil then pcall(function() HumanoidRootPart.Transparency = props.Transparency end) end
+                if props.BrickColor then pcall(function() HumanoidRootPart.BrickColor = props.BrickColor end) end
+                if props.Material then pcall(function() HumanoidRootPart.Material = props.Material end) end
+                if props.CanCollide ~= nil then pcall(function() HumanoidRootPart.CanCollide = props.CanCollide end) end
+                if props.Massless ~= nil then pcall(function() HumanoidRootPart.Massless = props.Massless end) end
+            end
+        end
+        savedHumanoidRootPartProps[uid] = nil
+    end)
+end
+
+local function applyHitboxToPlayer(player, sizeValue, transValue)
+    pcall(function()
+        if not player or player == LocalPlayer or not player.Character then return end
+        local HumanoidRootPart = player.Character:FindFirstChild("HumanoidRootPart")
+        if not HumanoidRootPart then return end
+        saveHumanoidRootPartProps(player)
+        HumanoidRootPart.Size = Vector3.new(sizeValue, sizeValue, sizeValue)
+        HumanoidRootPart.Transparency = transValue
+        -- optional styling:
+        pcall(function() HumanoidRootPart.BrickColor = BrickColor.new("Really red") end)
+        pcall(function() HumanoidRootPart.Material = Enum.Material.Neon end)
+        pcall(function() HumanoidRootPart.CanCollide = false end)
+        pcall(function() HumanoidRootPart.Massless = true end)
+    end)
+end
+
+-- Apply continuously to catch character spawns / changes
+local conn
+conn = RunService.RenderStepped:Connect(function()
+    for _, pl in ipairs(Players:GetPlayers()) do
+        if pl ~= LocalPlayer then
+            applyHitboxToPlayer(pl, HITBOX_SIZE, HITBOX_TRANSPARENCY)
+        end
+    end
+end)
+
+-- When players leave, restore their head
+Players.PlayerRemoving:Connect(function(pl)
+    restoreHumanoidRootPartProps(pl)
+end)
+
+-- Ensure when a new player spawns we apply the hitbox after their character exists
+Players.PlayerAdded:Connect(function(pl)
+    pl.CharacterAdded:Connect(function(char)
+        -- small delay to allow character hierarchy to initialize
+        wait(0.05)
+        if pl ~= LocalPlayer then
+            applyHitboxToPlayer(pl, HITBOX_SIZE, HITBOX_TRANSPARENCY)
+        end
+    end)
+end)
+
+-- Also restore all on script destroy / when stopping
+screenGui = LocalPlayer:FindFirstChild("PlayerGui")
+-- Clean-up function
+local function cleanup()
+    if conn and conn.Connected then
+        conn:Disconnect()
+    end
+    -- restore any saved heads
+    for _, pl in ipairs(Players:GetPlayers()) do
+        restoreHumanoidRootPartProps(pl)
+    end
+end
+
+-- If this script is removed/destroyed, ensure cleanup runs
+if script then
+    script.Destroying:Connect(function()
+        cleanup()
+    end)
+end
+
+-- Safety: if the game is closing or player leaving, restore
+Players.LocalPlayer.AncestryChanged:Connect(function()
+    -- if localplayer removed from game tree, cleanup
+    if not LocalPlayer:IsDescendantOf(game) then
+        cleanup()
+    end
+end)
+
+local Workspace, RunService, Players, CoreGui, Lighting = cloneref(game:GetService("Workspace")), cloneref(game:GetService("RunService")), cloneref(game:GetService("Players")), game:GetService("CoreGui"), cloneref(game:GetService("Lighting"))
+
+local ESP = {
+    Enabled = true,
+    TeamCheck = true,
+    MaxDistance = 200,
+    FontSize = 11,
+    FadeOut = {
+        OnDistance = true,
+        OnDeath = false,
+        OnLeave = false,
+    },
+    Options = { 
+        Teamcheck = false, TeamcheckRGB = Color3.fromRGB(0, 255, 0),
+        Friendcheck = true, FriendcheckRGB = Color3.fromRGB(0, 255, 0),
+        Highlight = false, HighlightRGB = Color3.fromRGB(255, 0, 0),
+    },
+    Drawing = {
+        Chams = {
+            Enabled  = false,
+            Thermal = false,
+            FillRGB = Color3.fromRGB(119, 120, 255),
+            Fill_Transparency = 100,
+            OutlineRGB = Color3.fromRGB(119, 120, 255),
+            Outline_Transparency = 100,
+            VisibleCheck = false,
+        },
+        Names = {
+            Enabled = true,
+            RGB = Color3.fromRGB(255, 255, 255),
+        },
+        Flags = {
+            Enabled = true,
+        },
+        Distances = {
+            Enabled = true, 
+            Position = "Text",
+            RGB = Color3.fromRGB(255, 255, 255),
+        },
+        Weapons = {
+            Enabled = true, WeaponTextRGB = Color3.fromRGB(119, 120, 255),
+            Outlined = false,
+            Gradient = false,
+            GradientRGB1 = Color3.fromRGB(255, 255, 255), GradientRGB2 = Color3.fromRGB(119, 120, 255),
+        },
+        Healthbar = {
+            Enabled = true,  
+            HealthText = true, Lerp = false, HealthTextRGB = Color3.fromRGB(0, 0, 255),
+            Width = 2.5,
+            Gradient = false, GradientRGB1 = Color3.fromRGB(200, 0, 0), GradientRGB2 = Color3.fromRGB(60, 60, 125), GradientRGB3 = Color3.fromRGB(119, 120, 255), 
+        },
+        Boxes = {
+            Animate = false,
+            RotationSpeed = 300,
+            Gradient = false, GradientRGB1 = Color3.fromRGB(119, 120, 255), GradientRGB2 = Color3.fromRGB(0, 0, 0), 
+            GradientFill = false, GradientFillRGB1 = Color3.fromRGB(119, 120, 255), GradientFillRGB2 = Color3.fromRGB(0, 0, 0), 
+            Filled = {
+                Enabled = false,
+                Transparency = 0.75,
+                RGB = Color3.fromRGB(0, 0, 0),
+            },
+            Full = {
+                Enabled = false,
+                RGB = Color3.fromRGB(255, 255, 255),
+            },
+            Corner = {
+                Enabled = false,
+                RGB = Color3.fromRGB(255, 255, 255),
+            },
+        };
+    };
+    Connections = {
+        RunService = RunService;
+    };
+    Fonts = {};
+}
+
+-- Def & Vars
+local Euphoria = ESP.Connections;
+local lplayer = Players.LocalPlayer;
+local camera = game.Workspace.CurrentCamera;
+local Cam = Workspace.CurrentCamera;
+local RotationAngle, Tick = -45, tick();
+
+-- Functions
+local Functions = {}
+do
+    function Functions:Create(Class, Properties)
+        local _Instance = typeof(Class) == 'string' and Instance.new(Class) or Class
+        for Property, Value in pairs(Properties) do
+            _Instance[Property] = Value
+        end
+        return _Instance;
+    end
+    --
+    function Functions:FadeOutOnDist(element, distance)
+        local transparency = math.max(0.1, 1 - (distance / ESP.MaxDistance))
+        if element:IsA("TextLabel") then
+            element.TextTransparency = 1 - transparency
+        elseif element:IsA("ImageLabel") then
+            element.ImageTransparency = 1 - transparency
+        elseif element:IsA("UIStroke") then
+            element.Transparency = 1 - transparency
+        elseif element:IsA("Frame") and (element == Healthbar or element == BehindHealthbar) then
+            element.BackgroundTransparency = 1 - transparency
+        elseif element:IsA("Frame") then
+            element.BackgroundTransparency = 1 - transparency
+        elseif element:IsA("Highlight") then
+            element.FillTransparency = 1 - transparency
+            element.OutlineTransparency = 1 - transparency
+        end;
+    end;  
 end;
-task.spawn(C_3);
 
-return G2L["1"], require;
+do -- Initalize
+    local ScreenGui = Functions:Create("ScreenGui", {
+        Parent = CoreGui,
+        Name = "ESPHolder",
+    });
+
+    local DupeCheck = function(plr)
+        if ScreenGui:FindFirstChild(plr.Name) then
+            ScreenGui[plr.Name]:Destroy()
+        end
+    end
+
+    local ESP = function(plr)
+        coroutine.wrap(DupeCheck)(plr) -- Dupecheck
+        local Name = Functions:Create("TextLabel", {Parent = ScreenGui, Position = UDim2.new(0.5, 0, 0, -11), Size = UDim2.new(0, 100, 0, 20), AnchorPoint = Vector2.new(0.5, 0.5), BackgroundTransparency = 1, TextColor3 = Color3.fromRGB(255, 255, 255), Font = Enum.Font.Code, TextSize = ESP.FontSize, TextStrokeTransparency = 0, TextStrokeColor3 = Color3.fromRGB(0, 0, 0), RichText = true})
+        local Distance = Functions:Create("TextLabel", {Parent = ScreenGui, Position = UDim2.new(0.5, 0, 0, 11), Size = UDim2.new(0, 100, 0, 20), AnchorPoint = Vector2.new(0.5, 0.5), BackgroundTransparency = 1, TextColor3 = Color3.fromRGB(255, 255, 255), Font = Enum.Font.Code, TextSize = ESP.FontSize, TextStrokeTransparency = 0, TextStrokeColor3 = Color3.fromRGB(0, 0, 0), RichText = true})
+        local Weapon = Functions:Create("TextLabel", {Parent = ScreenGui, Position = UDim2.new(0.5, 0, 0, 31), Size = UDim2.new(0, 100, 0, 20), AnchorPoint = Vector2.new(0.5, 0.5), BackgroundTransparency = 1, TextColor3 = Color3.fromRGB(255, 255, 255), Font = Enum.Font.Code, TextSize = ESP.FontSize, TextStrokeTransparency = 0, TextStrokeColor3 = Color3.fromRGB(0, 0, 0), RichText = true})
+        local Box = Functions:Create("Frame", {Parent = ScreenGui, BackgroundColor3 = Color3.fromRGB(0, 0, 0), BackgroundTransparency = 0.75, BorderSizePixel = 0})
+        local Gradient1 = Functions:Create("UIGradient", {Parent = Box, Enabled = ESP.Drawing.Boxes.GradientFill, Color = ColorSequence.new{ColorSequenceKeypoint.new(0, ESP.Drawing.Boxes.GradientFillRGB1), ColorSequenceKeypoint.new(1, ESP.Drawing.Boxes.GradientFillRGB2)}})
+        local Outline = Functions:Create("UIStroke", {Parent = Box, Enabled = ESP.Drawing.Boxes.Gradient, Transparency = 0, Color = Color3.fromRGB(255, 255, 255), LineJoinMode = Enum.LineJoinMode.Miter})
+        local Gradient2 = Functions:Create("UIGradient", {Parent = Outline, Enabled = ESP.Drawing.Boxes.Gradient, Color = ColorSequence.new{ColorSequenceKeypoint.new(0, ESP.Drawing.Boxes.GradientRGB1), ColorSequenceKeypoint.new(1, ESP.Drawing.Boxes.GradientRGB2)}})
+        local Healthbar = Functions:Create("Frame", {Parent = ScreenGui, BackgroundColor3 = Color3.fromRGB(255, 255, 255), BackgroundTransparency = 0})
+        local BehindHealthbar = Functions:Create("Frame", {Parent = ScreenGui, ZIndex = -1, BackgroundColor3 = Color3.fromRGB(0, 0, 0), BackgroundTransparency = 0})
+        local HealthbarGradient = Functions:Create("UIGradient", {Parent = Healthbar, Enabled = ESP.Drawing.Healthbar.Gradient, Rotation = -90, Color = ColorSequence.new{ColorSequenceKeypoint.new(0, ESP.Drawing.Healthbar.GradientRGB1), ColorSequenceKeypoint.new(0.5, ESP.Drawing.Healthbar.GradientRGB2), ColorSequenceKeypoint.new(1, ESP.Drawing.Healthbar.GradientRGB3)}})
+        local HealthText = Functions:Create("TextLabel", {Parent = ScreenGui, Position = UDim2.new(0.5, 0, 0, 31), Size = UDim2.new(0, 100, 0, 20), AnchorPoint = Vector2.new(0.5, 0.5), BackgroundTransparency = 1, TextColor3 = Color3.fromRGB(255, 255, 255), Font = Enum.Font.Code, TextSize = ESP.FontSize, TextStrokeTransparency = 0, TextStrokeColor3 = Color3.fromRGB(0, 0, 0)})
+        local Chams = Functions:Create("Highlight", {Parent = ScreenGui, FillTransparency = 1, OutlineTransparency = 0, OutlineColor = Color3.fromRGB(119, 120, 255), DepthMode = "AlwaysOnTop"})
+        local WeaponIcon = Functions:Create("ImageLabel", {Parent = ScreenGui, BackgroundTransparency = 1, BorderColor3 = Color3.fromRGB(0, 0, 0), BorderSizePixel = 0, Size = UDim2.new(0, 40, 0, 40)})
+        local Gradient3 = Functions:Create("UIGradient", {Parent = WeaponIcon, Rotation = -90, Enabled = ESP.Drawing.Weapons.Gradient, Color = ColorSequence.new{ColorSequenceKeypoint.new(0, ESP.Drawing.Weapons.GradientRGB1), ColorSequenceKeypoint.new(1, ESP.Drawing.Weapons.GradientRGB2)}})
+        local LeftTop = Functions:Create("Frame", {Parent = ScreenGui, BackgroundColor3 = ESP.Drawing.Boxes.Corner.RGB, Position = UDim2.new(0, 0, 0, 0)})
+        local LeftSide = Functions:Create("Frame", {Parent = ScreenGui, BackgroundColor3 = ESP.Drawing.Boxes.Corner.RGB, Position = UDim2.new(0, 0, 0, 0)})
+        local RightTop = Functions:Create("Frame", {Parent = ScreenGui, BackgroundColor3 = ESP.Drawing.Boxes.Corner.RGB, Position = UDim2.new(0, 0, 0, 0)})
+        local RightSide = Functions:Create("Frame", {Parent = ScreenGui, BackgroundColor3 = ESP.Drawing.Boxes.Corner.RGB, Position = UDim2.new(0, 0, 0, 0)})
+        local BottomSide = Functions:Create("Frame", {Parent = ScreenGui, BackgroundColor3 = ESP.Drawing.Boxes.Corner.RGB, Position = UDim2.new(0, 0, 0, 0)})
+        local BottomDown = Functions:Create("Frame", {Parent = ScreenGui, BackgroundColor3 = ESP.Drawing.Boxes.Corner.RGB, Position = UDim2.new(0, 0, 0, 0)})
+        local BottomRightSide = Functions:Create("Frame", {Parent = ScreenGui, BackgroundColor3 = ESP.Drawing.Boxes.Corner.RGB, Position = UDim2.new(0, 0, 0, 0)})
+        local BottomRightDown = Functions:Create("Frame", {Parent = ScreenGui, BackgroundColor3 = ESP.Drawing.Boxes.Corner.RGB, Position = UDim2.new(0, 0, 0, 0)})
+        local Flag1 = Functions:Create("TextLabel", {Parent = ScreenGui, Position = UDim2.new(1, 0, 0, 0), Size = UDim2.new(0, 100, 0, 20), AnchorPoint = Vector2.new(0.5, 0.5), BackgroundTransparency = 1, TextColor3 = Color3.fromRGB(255, 255, 255), Font = Enum.Font.Code, TextSize = ESP.FontSize, TextStrokeTransparency = 0, TextStrokeColor3 = Color3.fromRGB(0, 0, 0)})
+        local Flag2 = Functions:Create("TextLabel", {Parent = ScreenGui, Position = UDim2.new(1, 0, 0, 0), Size = UDim2.new(0, 100, 0, 20), AnchorPoint = Vector2.new(0.5, 0.5), BackgroundTransparency = 1, TextColor3 = Color3.fromRGB(255, 255, 255), Font = Enum.Font.Code, TextSize = ESP.FontSize, TextStrokeTransparency = 0, TextStrokeColor3 = Color3.fromRGB(0, 0, 0)})
+        --local DroppedItems = Functions:Create("TextLabel", {Parent = ScreenGui, AnchorPoint = Vector2.new(0.5, 0.5), BackgroundTransparency = 1, TextColor3 = Color3.fromRGB(255, 255, 255), Font = Enum.Font.Code, TextSize = ESP.FontSize, TextStrokeTransparency = 0, TextStrokeColor3 = Color3.fromRGB(0, 0, 0)})
+        --
+        local Updater = function()
+            local Connection;
+            local function HideESP()
+                Box.Visible = false;
+                Name.Visible = false;
+                Distance.Visible = false;
+                Weapon.Visible = false;
+                Healthbar.Visible = false;
+                BehindHealthbar.Visible = false;
+                HealthText.Visible = false;
+                WeaponIcon.Visible = false;
+                LeftTop.Visible = false;
+                LeftSide.Visible = false;
+                BottomSide.Visible = false;
+                BottomDown.Visible = false;
+                RightTop.Visible = false;
+                RightSide.Visible = false;
+                BottomRightSide.Visible = false;
+                BottomRightDown.Visible = false;
+                Flag1.Visible = false;
+                Chams.Enabled = false;
+                Flag2.Visible = false;
+                if not plr then
+                    ScreenGui:Destroy();
+                    Connection:Disconnect();
+                end
+            end
+            --
+            Connection = Euphoria.RunService.RenderStepped:Connect(function()
+                if plr.Character and plr.Character:FindFirstChild("HumanoidRootPart") then
+                    local HRP = plr.Character.HumanoidRootPart
+                    local Humanoid = plr.Character:WaitForChild("Humanoid");
+                    local Pos, OnScreen = Cam:WorldToScreenPoint(HRP.Position)
+                    local Dist = (Cam.CFrame.Position - HRP.Position).Magnitude / 3.5714285714
+                    
+                    if OnScreen and Dist <= ESP.MaxDistance then
+                        local Size = HRP.Size.Y
+                        local scaleFactor = (Size * Cam.ViewportSize.Y) / (Pos.Z * 2)
+                        local w, h = 3 * scaleFactor, 4.5 * scaleFactor
+
+                        -- Fade-out effect --
+                        if ESP.FadeOut.OnDistance then
+                            Functions:FadeOutOnDist(Box, Dist)
+                            Functions:FadeOutOnDist(Outline, Dist)
+                            Functions:FadeOutOnDist(Name, Dist)
+                            Functions:FadeOutOnDist(Distance, Dist)
+                            Functions:FadeOutOnDist(Weapon, Dist)
+                            Functions:FadeOutOnDist(Healthbar, Dist)
+                            Functions:FadeOutOnDist(BehindHealthbar, Dist)
+                            Functions:FadeOutOnDist(HealthText, Dist)
+                            Functions:FadeOutOnDist(WeaponIcon, Dist)
+                            Functions:FadeOutOnDist(LeftTop, Dist)
+                            Functions:FadeOutOnDist(LeftSide, Dist)
+                            Functions:FadeOutOnDist(BottomSide, Dist)
+                            Functions:FadeOutOnDist(BottomDown, Dist)
+                            Functions:FadeOutOnDist(RightTop, Dist)
+                            Functions:FadeOutOnDist(RightSide, Dist)
+                            Functions:FadeOutOnDist(BottomRightSide, Dist)
+                            Functions:FadeOutOnDist(BottomRightDown, Dist)
+                            Functions:FadeOutOnDist(Chams, Dist)
+                            Functions:FadeOutOnDist(Flag1, Dist)
+                            Functions:FadeOutOnDist(Flag2, Dist)
+                        end
+
+                        -- Teamcheck
+                        if ESP.TeamCheck and plr ~= lplayer and ((lplayer.Team ~= plr.Team and plr.Team) or (not lplayer.Team and not plr.Team)) and plr.Character and plr.Character:FindFirstChild("HumanoidRootPart") and plr.Character:FindFirstChild("Humanoid") then
+
+                            do -- Chams
+                                Chams.Adornee = plr.Character
+                                Chams.Enabled = ESP.Drawing.Chams.Enabled
+                                Chams.FillColor = ESP.Drawing.Chams.FillRGB
+                                Chams.OutlineColor = ESP.Drawing.Chams.OutlineRGB
+                                do -- Breathe
+                                    if ESP.Drawing.Chams.Thermal then
+                                        local breathe_effect = math.atan(math.sin(tick() * 2)) * 2 / math.pi
+                                        Chams.FillTransparency = ESP.Drawing.Chams.Fill_Transparency * breathe_effect * 0.01
+                                        Chams.OutlineTransparency = ESP.Drawing.Chams.Outline_Transparency * breathe_effect * 0.01
+                                    end
+                                end
+                                if ESP.Drawing.Chams.VisibleCheck then
+                                    Chams.DepthMode = "Occluded"
+                                else
+                                    Chams.DepthMode = "AlwaysOnTop"
+                                end
+                            end;
+
+                            do -- Corner Boxes
+                                LeftTop.Visible = ESP.Drawing.Boxes.Corner.Enabled
+                                LeftTop.Position = UDim2.new(0, Pos.X - w / 2, 0, Pos.Y - h / 2)
+                                LeftTop.Size = UDim2.new(0, w / 5, 0, 1)
+                                
+                                LeftSide.Visible = ESP.Drawing.Boxes.Corner.Enabled
+                                LeftSide.Position = UDim2.new(0, Pos.X - w / 2, 0, Pos.Y - h / 2)
+                                LeftSide.Size = UDim2.new(0, 1, 0, h / 5)
+                                
+                                BottomSide.Visible = ESP.Drawing.Boxes.Corner.Enabled
+                                BottomSide.Position = UDim2.new(0, Pos.X - w / 2, 0, Pos.Y + h / 2)
+                                BottomSide.Size = UDim2.new(0, 1, 0, h / 5)
+                                BottomSide.AnchorPoint = Vector2.new(0, 5)
+                                
+                                BottomDown.Visible = ESP.Drawing.Boxes.Corner.Enabled
+                                BottomDown.Position = UDim2.new(0, Pos.X - w / 2, 0, Pos.Y + h / 2)
+                                BottomDown.Size = UDim2.new(0, w / 5, 0, 1)
+                                BottomDown.AnchorPoint = Vector2.new(0, 1)
+                                
+                                RightTop.Visible = ESP.Drawing.Boxes.Corner.Enabled
+                                RightTop.Position = UDim2.new(0, Pos.X + w / 2, 0, Pos.Y - h / 2)
+                                RightTop.Size = UDim2.new(0, w / 5, 0, 1)
+                                RightTop.AnchorPoint = Vector2.new(1, 0)
+                                
+                                RightSide.Visible = ESP.Drawing.Boxes.Corner.Enabled
+                                RightSide.Position = UDim2.new(0, Pos.X + w / 2 - 1, 0, Pos.Y - h / 2)
+                                RightSide.Size = UDim2.new(0, 1, 0, h / 5)
+                                RightSide.AnchorPoint = Vector2.new(0, 0)
+                                
+                                BottomRightSide.Visible = ESP.Drawing.Boxes.Corner.Enabled
+                                BottomRightSide.Position = UDim2.new(0, Pos.X + w / 2, 0, Pos.Y + h / 2)
+                                BottomRightSide.Size = UDim2.new(0, 1, 0, h / 5)
+                                BottomRightSide.AnchorPoint = Vector2.new(1, 1)
+                                
+                                BottomRightDown.Visible = ESP.Drawing.Boxes.Corner.Enabled
+                                BottomRightDown.Position = UDim2.new(0, Pos.X + w / 2, 0, Pos.Y + h / 2)
+                                BottomRightDown.Size = UDim2.new(0, w / 5, 0, 1)
+                                BottomRightDown.AnchorPoint = Vector2.new(1, 1)                                                            
+                            end
+
+                            do -- Boxes
+                                Box.Position = UDim2.new(0, Pos.X - w / 2, 0, Pos.Y - h / 2)
+                                Box.Size = UDim2.new(0, w, 0, h)
+                                Box.Visible = ESP.Drawing.Boxes.Full.Enabled;
+
+                                -- Gradient
+                                if ESP.Drawing.Boxes.Filled.Enabled then
+                                    Box.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                                    if ESP.Drawing.Boxes.GradientFill then
+                                        Box.BackgroundTransparency = ESP.Drawing.Boxes.Filled.Transparency;
+                                    else
+                                        Box.BackgroundTransparency = 1
+                                    end
+                                    Box.BorderSizePixel = 1
+                                else
+                                    Box.BackgroundTransparency = 1
+                                end
+                                -- Animation
+                                RotationAngle = RotationAngle + (tick() - Tick) * ESP.Drawing.Boxes.RotationSpeed * math.cos(math.pi / 4 * tick() - math.pi / 2)
+                                if ESP.Drawing.Boxes.Animate then
+                                    Gradient1.Rotation = RotationAngle
+                                    Gradient2.Rotation = RotationAngle
+                                else
+                                    Gradient1.Rotation = -45
+                                    Gradient2.Rotation = -45
+                                end
+                                Tick = tick()
+                            end
+
+                            -- Healthbar
+                            do  
+                                local health = Humanoid.Health / Humanoid.MaxHealth;
+                                Healthbar.Visible = ESP.Drawing.Healthbar.Enabled;
+                                Healthbar.Position = UDim2.new(0, Pos.X - w / 2 - 6, 0, Pos.Y - h / 2 + h * (1 - health))  
+                                Healthbar.Size = UDim2.new(0, ESP.Drawing.Healthbar.Width, 0, h * health)  
+                                --
+                                BehindHealthbar.Visible = ESP.Drawing.Healthbar.Enabled;
+                                BehindHealthbar.Position = UDim2.new(0, Pos.X - w / 2 - 6, 0, Pos.Y - h / 2)  
+                                BehindHealthbar.Size = UDim2.new(0, ESP.Drawing.Healthbar.Width, 0, h)
+                                -- Health Text
+                                do
+                                    if ESP.Drawing.Healthbar.HealthText then
+                                        local healthPercentage = math.floor(Humanoid.Health / Humanoid.MaxHealth * 100)
+                                        HealthText.Position = UDim2.new(0, Pos.X - w / 2 - 6, 0, Pos.Y - h / 2 + h * (1 - healthPercentage / 100) + 3)
+                                        HealthText.Text = tostring(healthPercentage)
+                                        HealthText.Visible = Humanoid.Health < Humanoid.MaxHealth
+                                        if ESP.Drawing.Healthbar.Lerp then
+                                            local color = health >= 0.75 and Color3.fromRGB(0, 255, 0) or health >= 0.5 and Color3.fromRGB(255, 255, 0) or health >= 0.25 and Color3.fromRGB(255, 170, 0) or Color3.fromRGB(255, 0, 0)
+                                            HealthText.TextColor3 = color
+                                        else
+                                            HealthText.TextColor3 = ESP.Drawing.Healthbar.HealthTextRGB
+                                        end
+                                    end                        
+                                end
+                            end
+
+                            do -- Names
+                                Name.Visible = ESP.Drawing.Names.Enabled
+                                if ESP.Options.Friendcheck and lplayer:IsFriendsWith(plr.UserId) then
+                                    Name.Text = string.format('(<font color="rgb(%d, %d, %d)">F</font>) %s', ESP.Options.FriendcheckRGB.R * 255, ESP.Options.FriendcheckRGB.G * 255, ESP.Options.FriendcheckRGB.B * 255, plr.Name)
+                                else
+                                    Name.Text = string.format('(<font color="rgb(%d, %d, %d)">E</font>) %s', 255, 0, 0, plr.Name)
+                                end
+                                Name.Position = UDim2.new(0, Pos.X, 0, Pos.Y - h / 2 - 9)
+                            end
+                            
+                            do -- Distance
+                                if ESP.Drawing.Distances.Enabled then
+                                    if ESP.Drawing.Distances.Position == "Bottom" then
+                                        Weapon.Position = UDim2.new(0, Pos.X, 0, Pos.Y + h / 2 + 18)
+                                        WeaponIcon.Position = UDim2.new(0, Pos.X - 21, 0, Pos.Y + h / 2 + 15);
+                                        Distance.Position = UDim2.new(0, Pos.X, 0, Pos.Y + h / 2 + 7)
+                                        Distance.Text = string.format("%d meters", math.floor(Dist))
+                                        Distance.Visible = true
+                                    elseif ESP.Drawing.Distances.Position == "Text" then
+                                        Weapon.Position = UDim2.new(0, Pos.X, 0, Pos.Y + h / 2 + 8)
+                                        WeaponIcon.Position = UDim2.new(0, Pos.X - 21, 0, Pos.Y + h / 2 + 5);
+                                        Distance.Visible = false
+                                        if ESP.Options.Friendcheck and lplayer:IsFriendsWith(plr.UserId) then
+                                            Name.Text = string.format('(<font color="rgb(%d, %d, %d)">F</font>) %s [%d]', ESP.Options.FriendcheckRGB.R * 255, ESP.Options.FriendcheckRGB.G * 255, ESP.Options.FriendcheckRGB.B * 255, plr.Name, math.floor(Dist))
+                                        else
+                                            Name.Text = string.format('(<font color="rgb(%d, %d, %d)">E</font>) %s [%d]', 255, 0, 0, plr.Name, math.floor(Dist))
+                                        end
+                                        Name.Visible = ESP.Drawing.Names.Enabled
+                                    end
+                                end
+                            end
+
+                            do -- Weapons
+                                Weapon.Text = "none"
+                                Weapon.Visible = ESP.Drawing.Weapons.Enabled
+                            end                            
+                        else
+                            HideESP();
+                        end
+                    else
+                        HideESP();
+                    end
+                else
+                    HideESP();
+                end
+            end)
+        end
+        coroutine.wrap(Updater)();
+    end
+    do -- Update ESP
+        for _, v in pairs(game:GetService("Players"):GetPlayers()) do
+            if v.Name ~= lplayer.Name then
+                coroutine.wrap(ESP)(v)
+            end      
+        end
+        --
+        game:GetService("Players").PlayerAdded:Connect(function(v)
+            coroutine.wrap(ESP)(v)
+        end);
+    end;
+end;
+-- End of script
