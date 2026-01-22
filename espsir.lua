@@ -290,17 +290,17 @@ declare(features, "visuals", {
 	["enabled"] = true,
 	["teamCheck"] = false,
 	["teamColor"] = false,
-	["renderDistance"] = 400,
+	["renderDistance"] = 500,
 
 	["boxes"] = {
 		["enabled"] = true,
 		["color"] = Color3.fromRGB(255, 255, 255),
 		["outline"] = {
-			["enabled"] = false,
+			["enabled"] = true,
 			["color"] = Color3.fromRGB(0, 0, 0),
 		},
 		["filled"] = {
-			["enabled"] = false,
+			["enabled"] = true,
 			["color"] = Color3.fromRGB(255, 255, 255),
 			["transparency"] = 0.25
 		},
@@ -309,7 +309,7 @@ declare(features, "visuals", {
 		["enabled"] = true,
 		["color"] = Color3.fromRGB(255, 255, 255),
 		["outline"] = {
-			["enabled"] = false,
+			["enabled"] = true,
 			["color"] = Color3.fromRGB(0, 0, 0),
 		},
 	},
@@ -318,29 +318,29 @@ declare(features, "visuals", {
 		["color"] = Color3.fromRGB(0, 255, 0),
 		["colorLow"] = Color3.fromRGB(255, 0, 0),
 		["outline"] = {
-			["enabled"] = false,
+			["enabled"] = true,
 			["color"] = Color3.fromRGB(0, 0, 0)
 		},
 		["text"] = {
-			["enabled"] = false,
+			["enabled"] = true,
 			["outline"] = {
-				["enabled"] = false,
+				["enabled"] = true,
 			},
 		}
 	},
 	["distance"] = {
-		["enabled"] = true,
+		["enabled"] = false,
 		["color"] = Color3.fromRGB(255, 255, 255),
 		["outline"] = {
-			["enabled"] = false,
+			["enabled"] = true,
 			["color"] = Color3.fromRGB(0, 0, 0),
 		},
 	},
 	["weapon"] = {
-		["enabled"] = true,
+		["enabled"] = false,
 		["color"] = Color3.fromRGB(255, 255, 255),
 		["outline"] = {
-			["enabled"] = false,
+			["enabled"] = true,
 			["color"] = Color3.fromRGB(0, 0, 0),
 		},
 	}
