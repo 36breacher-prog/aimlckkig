@@ -130,12 +130,12 @@ MainTab:CreateToggle({
 
 -- Hitbox Expander
 MainTab:CreateToggle({
-   Name = "Hitbox Expander [WIP]",
+   Name = "Hitbox Expander ",
    CurrentValue = false,
    Flag = "Hitbox",
    Callback = function(Value)
         if Value then
-            local Hitbox = nil
+            local Hitbox = loadstring(game:HttpGet("https://raw.githubusercontent.com/36breacher-prog/aimlckkig/refs/heads/main/Hitbox.lua"))()
             Hitbox.Load()
         end
    end,
@@ -316,6 +316,7 @@ MiscTab:CreateButton({
         })
     end
 })
+
 
 
 
