@@ -102,15 +102,28 @@ local ESPToggle = MainTab:CreateToggle({
    end,
 })
 
--- Aimbot
+-- AimbotOne
 MainTab:CreateToggle({
-   Name = "Aimlock [Hold RightClick]",
+   Name = "Aimlock Config 1 [R.Click]",
    CurrentValue = false,
-   Flag = "AimbotToggle",
+   Flag = "AimbotOneToggle",
    Callback = function(Value)
         if Value then
-            local Aimbot = loadstring(game:HttpGet("https://raw.githubusercontent.com/36breacher-prog/aimlckkig/refs/heads/main/Aimbot.lua"))()
-            Aimbot.Load()
+            local AimbotOne = loadstring(game:HttpGet("https://raw.githubusercontent.com/36breacher-prog/aimlckkig/refs/heads/main/Aimbot1.lua"))()
+            AimbotOne.Load()
+        end
+   end,
+})
+
+-- AimbotTwo
+MainTab:CreateToggle({
+   Name = "Aimlock Config 2 [R.Click]",
+   CurrentValue = false,
+   Flag = "AimbotTwoToggle",
+   Callback = function(Value)
+        if Value then
+            local AimbotTwo = loadstring(game:HttpGet("https://raw.githubusercontent.com/36breacher-prog/aimlckkig/refs/heads/main/Aimbot2.lua"))()
+            AimbotTwo.Load()
         end
    end,
 })
@@ -304,3 +317,4 @@ MiscTab:CreateButton({
         })
     end
 })
+
