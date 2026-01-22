@@ -115,19 +115,6 @@ MainTab:CreateToggle({
    end,
 })
 
--- AimbotTwo
-MainTab:CreateToggle({
-   Name = "Aimlock Config 2 [R.Click]",
-   CurrentValue = false,
-   Flag = "AimbotToggle",
-   Callback = function(Value)
-        if Value then
-            local Aimbot = loadstring(game:HttpGet("https://raw.githubusercontent.com/36breacher-prog/aimlckkig/refs/heads/main/Aimbot2.lua"))()
-            Aimbot.Load()
-        end
-   end,
-})
-
 -- AutoReload
 MainTab:CreateToggle({
    Name = "AutoReload",
@@ -317,5 +304,6 @@ MiscTab:CreateButton({
         })
     end
 })
+
 
 
