@@ -104,7 +104,7 @@ local ESPToggle = MainTab:CreateToggle({
 
 -- Aimbot
 MainTab:CreateToggle({
-   Name = "Aimlock Config 1 [R.Click]",
+   Name = "Aimlock [R.Click]",
    CurrentValue = false,
    Flag = "AimbotToggle",
    Callback = function(Value)
@@ -270,14 +270,14 @@ MiscTab:CreateToggle({
     end
 })
 
--- NAME
+-- Quick Aimbot
 MiscTab:CreateButton({
-    Name = "NAME",
+    Name = "Spanish Aimbot [Configurable]",
     Callback = function()
-        LOADSTRING()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-ALLVESZZ-UNIVERSAL-AIMBOT-V9-89509"))()
         Rayfield:Notify({
-            Title = "NOTIF TITLE",
-            Content = "NOTIF DESCRIPTION",
+            Title = "Aimbot V9 Opened",
+            Content = "Button on the right",
             Duration = 5,
             Image = nil
         })
@@ -304,6 +304,7 @@ MiscTab:CreateButton({
         })
     end
 })
+
 
 
 
