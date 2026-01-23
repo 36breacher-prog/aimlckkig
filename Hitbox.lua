@@ -1,3 +1,234 @@
+lycodas
+lycodas
+lycodas
+Do Not Disturb
+
+lycodas
+lycodas
+
+ — 6:10 PM
+i somehow made
+the
+most goated aimbot config
+BUT
+it only locks onto my teammates.
+sigh.
+𝔦𝔤𝔬𝔯 — 6:21 PM
+Forwarded
+I got deported by ice so yeah
+@enex gato from CI has been deported.
+lycodas
+lycodas
+
+ — 6:23 PM
+igor
+can you help me test
+my
+config
+?
+𝔦𝔤𝔬𝔯 — 6:23 PM
+How
+lycodas
+lycodas
+
+ — 6:23 PM
+using it on public server bots is
+impossible
+lycodas
+lycodas
+
+ — 6:23 PM
+just by moving around
+𝔦𝔤𝔬𝔯 — 6:23 PM
+Fine
+Why you always gotta
+lycodas
+lycodas
+
+ — 6:23 PM
+yes thank you.
+𝔦𝔤𝔬𝔯 — 6:23 PM
+Ask me when I’m trying to jerk
+Make it fast.
+lycodas
+lycodas
+
+ — 6:23 PM
+so you can jerk to me.
+𝔦𝔤𝔬𝔯 — 6:23 PM
+Otherwise I’d need to multitask
+lycodas
+lycodas
+
+ — 6:23 PM
+ok
+join KDF's server
+𝔦𝔤𝔬𝔯 — 6:23 PM
+ok
+lycodas
+lycodas
+
+ — 6:24 PM
+the rx 5700 tryna load 4k porn:
+𝔦𝔤𝔬𝔯 — 6:26 PM
+Once again
+There’s no server.
+𝔦𝔤𝔬𝔯 — 6:26 PM
+Who the fuck jerks on the pc
+😭😭😭😭
+lycodas
+lycodas
+
+ — 6:26 PM
+ok there
+once again
+whataever
+@𝔦𝔤𝔬𝔯
+Image
+Abubakar | V4
+
+ — 6:28 PM
+@lycodas @enex kitasan black last race😭
+lycodas
+lycodas
+
+ — 6:31 PM
+@𝔦𝔤𝔬𝔯 aimbot failed
+Image
+😢
+𝔦𝔤𝔬𝔯 — 6:32 PM
+I’m on 5000
+Ping
+😭😭
+7000 now
+Abubakar | V4
+
+ — 6:32 PM
+playable
+lycodas
+lycodas
+
+ — 6:32 PM
+LOL
+LOL
+sorry @𝔦𝔤𝔬𝔯 .
+𝔦𝔤𝔬𝔯 — 6:32 PM
+Kasp penis nar
+Disses me
+Ddosed
+lycodas
+lycodas
+
+ — 6:32 PM
+it was me.
+𝔦𝔤𝔬𝔯 — 6:32 PM
+Me.
+lycodas
+lycodas
+
+ — 6:32 PM
+Image
+𝔦𝔤𝔬𝔯 — 6:32 PM
+No…
+lycodas
+lycodas
+
+ — 6:33 PM
+the deathnet:
+𝔦𝔤𝔬𝔯 — 6:34 PM
+Okay yeah
+This is
+lycodas
+lycodas
+
+ — 6:34 PM
+idk what this confige ven is
+𝔦𝔤𝔬𝔯 — 6:34 PM
+Unplayable
+lycodas
+lycodas
+
+ — 6:34 PM
+but it feels
+pretty legit.
+𝔦𝔤𝔬𝔯 — 6:34 PM
+I have no idea
+Why I’m
+Lagging this hard
+lycodas
+lycodas
+
+ — 6:34 PM
+even though it doesnt hit heads for some reason.
+im supposed to be hitting headshots only
+MG I REALIZED
+WHAT THAT
+SETTING IS
+LOL
+𝔦𝔤𝔬𝔯 — 6:35 PM
+Isnt Thornton
+matwiej
+
+ — 6:35 PM
+Is there a CT
+@lycodas
+lycodas
+lycodas
+
+ — 6:39 PM
+no
+@𝔦𝔤𝔬𝔯
+Image
+It just makes you into a box that i can hit
+😭
+bro idk where u are
+𝔦𝔤𝔬𝔯 — 6:42 PM
+does he know.
+Image
+lycodas
+lycodas
+
+ — 6:42 PM
+no
+u appeared at spawn fro me
+for me*
+but i can just beam the enemy team by going top
+🤑
+this will be peak trolling bro
+𝔦𝔤𝔬𝔯 — 6:43 PM
+Can you shoot through fence
+lycodas
+lycodas
+
+ — 6:43 PM
+i could
+if the hitbox expander
+wasnt
+so broken.
+i think ik why its broken to.
+let me js
+-- :)
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+
+local LocalPlayer = Players.LocalPlayer
+Expand
+message.txt
+32 KB
+backup it here
+while i try to fix it
+thish opefully works
+-- :)
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+
+local LocalPlayer = Players.LocalPlayer
+Expand
+message.txt
+31 KB
+k its
+broken
+﻿
 -- :)
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
@@ -9,62 +240,62 @@ local HITBOX_TRANSPARENCY = 0.75
 
 -- Store original head properties so we can restore them later
 -- keyed by player.UserId
-local savedTorsoProps = {}
+local savedHumanoidRootPartProps = {}
 
-local function saveTorsoProps(player)
+local function saveHumanoidRootPartProps(player)
     pcall(function()
         if not player or not player.Character then return end
-        local Torso  = player.Character:FindFirstChild("Torso")
-        if not Torso  then return end
+        local HumanoidRootPart  = player.Character:FindFirstChild("HumanoidRootPart")
+        if not HumanoidRootPart  then return end
         local uid = player.UserId
-        if not savedTorsoProps[uid] then
-            savedTorsoProps[uid] = {
-                Size = Torso.Size,
-                Transparency = Torso.Transparency,
-                BrickColor = Torso.BrickColor,
-                Material = Torso.Material,
-                CanCollide = Torso.CanCollide,
-                Massless = Torso.Massless,
+        if not savedHeadProps[uid] then
+            savedHeadProps[uid] = {
+                Size = HumanoidRootPart.Size,
+                Transparency = HumanoidRootPart.Transparency,
+                BrickColor = HumanoidRootPart.BrickColor,
+                Material = HumanoidRootPart.Material,
+                CanCollide = HumanoidRootPart.CanCollide,
+                Massless = HumanoidRootPart.Massless,
             }
         end
     end)
 end
 
-local function restoreTorsoProps(player)
+local function restoreHumanoidRootPartProps(player)
     pcall(function()
         if not player then return end
         local uid = player.UserId
-        local props = savedTorsoProps[uid]
+        local props = savedHumanoidRootPartProps[uid]
         if not props then return end
         if player.Character then
-            local head = player.Character:FindFirstChild("Torso")
+            local head = player.Character:FindFirstChild("HumanoidRootPart")
             if head then
                 -- restore safely
-                if props.Size then pcall(function() Torso.Size = props.Size end) end
-                if props.Transparency ~= nil then pcall(function() Torso.Transparency = props.Transparency end) end
-                if props.BrickColor then pcall(function() Torso.BrickColor = props.BrickColor end) end
-                if props.Material then pcall(function() Torso.Material = props.Material end) end
-                if props.CanCollide ~= nil then pcall(function() Torso.CanCollide = props.CanCollide end) end
-                if props.Massless ~= nil then pcall(function() Torso.Massless = props.Massless end) end
+                if props.Size then pcall(function() HumanoidRootPart.Size = props.Size end) end
+                if props.Transparency ~= nil then pcall(function() HumanoidRootPart.Transparency = props.Transparency end) end
+                if props.BrickColor then pcall(function() HumanoidRootPart.BrickColor = props.BrickColor end) end
+                if props.Material then pcall(function() HumanoidRootPart.Material = props.Material end) end
+                if props.CanCollide ~= nil then pcall(function() HumanoidRootPart.CanCollide = props.CanCollide end) end
+                if props.Massless ~= nil then pcall(function() HumanoidRootPart.Massless = props.Massless end) end
             end
         end
-        savedTorsoProps[uid] = nil
+        savedHumanoidRootPartProps[uid] = nil
     end)
 end
 
 local function applyHitboxToPlayer(player, sizeValue, transValue)
     pcall(function()
         if not player or player == LocalPlayer or not player.Character then return end
-        local Torso = player.Character:FindFirstChild("Torso")
-        if not Torso then return end
-        saveTorsoProps(player)
-        Torso.Size = Vector3.new(sizeValue, sizeValue, sizeValue)
-        Torso.Transparency = transValue
+        local HumanoidRootPart = player.Character:FindFirstChild("HumanoidRootPart")
+        if not HumanoidRootPart then return end
+        saveHumanoidRootPartProps(player)
+        HumanoidRootPart.Size = Vector3.new(sizeValue, sizeValue, sizeValue)
+        HumanoidRootPart.Transparency = transValue
         -- optional styling:
-        pcall(function() Torso.BrickColor = BrickColor.new("Really red") end)
-        pcall(function() Torso.Material = Enum.Material.Neon end)
-        pcall(function() Torso.CanCollide = false end)
-        pcall(function() Torso.Massless = true end)
+        pcall(function() HumanoidRootPart.BrickColor = BrickColor.new("Really red") end)
+        pcall(function() HumanoidRootPart.Material = Enum.Material.Neon end)
+        pcall(function() HumanoidRootPart.CanCollide = false end)
+        pcall(function() HumanoidRootPart.Massless = true end)
     end)
 end
 
@@ -80,7 +311,7 @@ end)
 
 -- When players leave, restore their head
 Players.PlayerRemoving:Connect(function(pl)
-    restoreProps(pl)
+    restoreHumanoidRootPartProps(pl)
 end)
 
 -- Ensure when a new player spawns we apply the hitbox after their character exists
@@ -103,7 +334,7 @@ local function cleanup()
     end
     -- restore any saved heads
     for _, pl in ipairs(Players:GetPlayers()) do
-        restoreTorsoProps(pl)
+        restoreHumanoidRootPartProps(pl)
     end
 end
 
@@ -141,7 +372,7 @@ local ESP = {
     },
     Drawing = {
         Chams = {
-            Enabled  = true,
+            Enabled  = false,
             Thermal = false,
             FillRGB = Color3.fromRGB(119, 120, 255),
             Fill_Transparency = 100,
@@ -305,8 +536,8 @@ do -- Initalize
             end
             --
             Connection = Euphoria.RunService.RenderStepped:Connect(function()
-                if plr.Character and plr.Character:FindFirstChild("") then
-                    local HRP = plr.Character.
+                if plr.Character and plr.Character:FindFirstChild("HumanoidRootPart") then
+                    local HRP = plr.Character.HumanoidRootPart
                     local Humanoid = plr.Character:WaitForChild("Humanoid");
                     local Pos, OnScreen = Cam:WorldToScreenPoint(HRP.Position)
                     local Dist = (Cam.CFrame.Position - HRP.Position).Magnitude / 3.5714285714
@@ -341,7 +572,7 @@ do -- Initalize
                         end
 
                         -- Teamcheck
-                        if ESP.TeamCheck and plr ~= lplayer and ((lplayer.Team ~= plr.Team and plr.Team) or (not lplayer.Team and not plr.Team)) and plr.Character and plr.Character:FindFirstChild("") and plr.Character:FindFirstChild("Humanoid") then
+                        if ESP.TeamCheck and plr ~= lplayer and ((lplayer.Team ~= plr.Team and plr.Team) or (not lplayer.Team and not plr.Team)) and plr.Character and plr.Character:FindFirstChild("HumanoidRootPart") and plr.Character:FindFirstChild("Humanoid") then
 
                             do -- Chams
                                 Chams.Adornee = plr.Character
@@ -520,3 +751,5 @@ do -- Initalize
     end;
 end;
 -- End of script
+message.txt
+32 KB
