@@ -7,24 +7,24 @@ local LocalPlayer = Players.LocalPlayer
 local HITBOX_SIZE = 5.5
 local HITBOX_TRANSPARENCY = 0.5
 
--- Store original head properties so we can restore them later
+-- Store original LowerTorso properties so we can restore them later
 -- keyed by player.UserId
 local savedLowerTorsoProps = {}
 
 local function saveLowerTorsoProps(player)
     pcall(function()
         if not player or not player.Character then return end
-        local head = player.Character:FindFirstChild("LowerTorso")
-        if not head then return end
+        local LowerTorso = player.Character:FindFirstChild("LowerTorso")
+        if not LowerTorso then return end
         local uid = player.UserId
         if not savedLowerTorsoProps[uid] then
             savedLowerTorsoProps[uid] = {
-                Size = head.Size,
-                Transparency = head.Transparency,
-                BrickColor = head.BrickColor,
-                Material = head.Material,
-                CanCollide = head.CanCollide,
-                Massless = head.Massless,
+                Size = LowerTorso.Size,
+                Transparency = LowerTorso.Transparency,
+                BrickColor = LowerTorso.BrickColor,
+                Material = LowerTorso.Material,
+                CanCollide = LowerTorso.CanCollide,
+                Massless = LowerTorso.Massless,
             }
         end
     end)
@@ -37,15 +37,15 @@ local function restoreLowerTorsoProps(player)
         local props = savedLowerTorsoProps[uid]
         if not props then return end
         if player.Character then
-            local head = player.Character:FindFirstChild("LowerTorso")
-            if head then
+            local LowerTorso = player.Character:FindFirstChild("LowerTorso")
+            if LowerTorso then
                 -- restore safely
-                if props.Size then pcall(function() head.Size = props.Size end) end
-                if props.Transparency ~= nil then pcall(function() head.Transparency = props.Transparency end) end
-                if props.BrickColor then pcall(function() head.BrickColor = props.BrickColor end) end
-                if props.Material then pcall(function() head.Material = props.Material end) end
-                if props.CanCollide ~= nil then pcall(function() head.CanCollide = props.CanCollide end) end
-                if props.Massless ~= nil then pcall(function() head.Massless = props.Massless end) end
+                if props.Size then pcall(function() LowerTorso.Size = props.Size end) end
+                if props.Transparency ~= nil then pcall(function() LowerTorso.Transparency = props.Transparency end) end
+                if props.BrickColor then pcall(function() LowerTorso.BrickColor = props.BrickColor end) end
+                if props.Material then pcall(function() LowerTorso.Material = props.Material end) end
+                if props.CanCollide ~= nil then pcall(function() LowerTorso.CanCollide = props.CanCollide end) end
+                if props.Massless ~= nil then pcall(function() LowerTorso.Massless = props.Massless end) end
             end
         end
         savedLowerTorsoProps[uid] = nil
@@ -55,16 +55,16 @@ end
 local function applyHitboxToPlayer(player, sizeValue, transValue)
     pcall(function()
         if not player or player == LocalPlayer or not player.Character then return end
-        local head = player.Character:FindFirstChild("LowerTorso")
-        if not head then return end
+        local LowerTorso = player.Character:FindFirstChild("LowerTorso")
+        if not LowerTorso then return end
         saveLowerTorsoProps(player)
-        head.Size = Vector3.new(sizeValue, sizeValue, sizeValue)
-        head.Transparency = transValue
+        LowerTorso.Size = Vector3.new(sizeValue, sizeValue, sizeValue)
+        LowerTorso.Transparency = transValue
         -- optional styling:
-        pcall(function() head.BrickColor = BrickColor.new("Really red") end)
-        pcall(function() head.Material = Enum.Material.Neon end)
-        pcall(function() head.CanCollide = false end)
-        pcall(function() head.Massless = true end)
+        pcall(function() LowerTorso.BrickColor = BrickColor.new("Really red") end)
+        pcall(function() LowerTorso.Material = Enum.Material.Neon end)
+        pcall(function() LowerTorso.CanCollide = false end)
+        pcall(function() LowerTorso.Massless = true end)
     end)
 end
 
@@ -78,7 +78,7 @@ conn = RunService.RenderStepped:Connect(function()
     end
 end)
 
--- When players leave, restore their head
+-- When players leave, restore their LowerTorso
 Players.PlayerRemoving:Connect(function(pl)
     restoreLowerTorsoProps(pl)
 end)
@@ -101,7 +101,7 @@ local function cleanup()
     if conn and conn.Connected then
         conn:Disconnect()
     end
-    -- restore any saved heads
+    -- restore any saved LowerTorsos
     for _, pl in ipairs(Players:GetPlayers()) do
         restoreLowerTorsoProps(pl)
     end
