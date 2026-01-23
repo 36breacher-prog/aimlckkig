@@ -30,7 +30,7 @@ local Section = MainTab:CreateSection("Main Features")
 
 Rayfield:Notify({
    Title = "Script Executed!",
-   Content = "RHO-36 CLIENT",
+   Content = "RHO-36 Client",
    Duration = 6.5,
    Image = nil,
 })
@@ -45,7 +45,7 @@ MainTab:CreateButton({
             _G.infinJumpStarted = true
             
             game.StarterGui:SetCore("SendNotification", {
-                Title = "RHO-36 CLIENT", 
+                Title = "RHO-36 Client", 
                 Text = "Infinite Jump: ENABLED", 
                 Duration = 5
             })
@@ -182,7 +182,7 @@ MiscTab:CreateButton({
 
 -- Infinite Yield
 MiscTab:CreateButton({
-    Name = "Infinite Yield [ADMIN MENU]",
+    Name = "Infinite Yield [Admin]",
     Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
         Rayfield:Notify({
@@ -196,7 +196,7 @@ MiscTab:CreateButton({
 
 -- Duality Movement Menu
 MiscTab:CreateButton({
-    Name = "[CLOSES RHO CLIENT] Duality Movement Menu [KEY: nissan23] ",
+    Name = "Duality Movement Menu [Key: nissan23]",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SecuredProfitss/Duality/refs/heads/main/dokidoki"))()
         Rayfield:Notify({
@@ -329,6 +329,7 @@ MiscTab:CreateButton({
         })
     end
 })
+
 
 
 
