@@ -5,7 +5,7 @@ local RunService = game:GetService("RunService")
 local LocalPlayer = Players.LocalPlayer
 
 local HITBOX_SIZE = 5.5
-local HITBOX_TRANSPARENCY = 0.7
+local HITBOX_TRANSPARENCY = 0.5
 
 -- Store original head properties so we can restore them later
 -- keyed by player.UserId
@@ -126,7 +126,7 @@ local Workspace, RunService, Players, CoreGui, Lighting = cloneref(game:GetServi
 
 local ESP = {
     Enabled = true,
-    TeamCheck = false,
+    TeamCheck = true,
     MaxDistance = 200,
     FontSize = 11,
     FadeOut = {
@@ -136,7 +136,7 @@ local ESP = {
     },
     Options = { 
         Teamcheck = false, TeamcheckRGB = Color3.fromRGB(0, 255, 0),
-        Friendcheck = false, FriendcheckRGB = Color3.fromRGB(0, 255, 0),
+        Friendcheck = true, FriendcheckRGB = Color3.fromRGB(0, 255, 0),
         Highlight = false, HighlightRGB = Color3.fromRGB(255, 0, 0),
     },
     Drawing = {
@@ -147,7 +147,7 @@ local ESP = {
             Fill_Transparency = 100,
             OutlineRGB = Color3.fromRGB(119, 120, 255),
             Outline_Transparency = 100,
-            VisibleCheck = false,
+            VisibleCheck = true,
         },
         Names = {
             Enabled = true,
