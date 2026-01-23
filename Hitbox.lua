@@ -9,62 +9,62 @@ local HITBOX_TRANSPARENCY = 0.75
 
 -- Store original head properties so we can restore them later
 -- keyed by player.UserId
-local savedHumanoidRootPartProps = {}
+local savedTorsoProps = {}
 
-local function saveHumanoidRootPartProps(player)
+local function saveTorsoProps(player)
     pcall(function()
         if not player or not player.Character then return end
-        local HumanoidRootPart  = player.Character:FindFirstChild("HumanoidRootPart")
-        if not HumanoidRootPart  then return end
+        local Torso  = player.Character:FindFirstChild("Torso")
+        if not Torso  then return end
         local uid = player.UserId
-        if not savedHeadProps[uid] then
-            savedHeadProps[uid] = {
-                Size = HumanoidRootPart.Size,
-                Transparency = HumanoidRootPart.Transparency,
-                BrickColor = HumanoidRootPart.BrickColor,
-                Material = HumanoidRootPart.Material,
-                CanCollide = HumanoidRootPart.CanCollide,
-                Massless = HumanoidRootPart.Massless,
+        if not savedTorsoProps[uid] then
+            savedTorsoProps[uid] = {
+                Size = Torso.Size,
+                Transparency = Torso.Transparency,
+                BrickColor = Torso.BrickColor,
+                Material = Torso.Material,
+                CanCollide = Torso.CanCollide,
+                Massless = Torso.Massless,
             }
         end
     end)
 end
 
-local function restoreHumanoidRootPartProps(player)
+local function restoreTorsoProps(player)
     pcall(function()
         if not player then return end
         local uid = player.UserId
-        local props = savedHumanoidRootPartProps[uid]
+        local props = savedTorsoProps[uid]
         if not props then return end
         if player.Character then
-            local head = player.Character:FindFirstChild("HumanoidRootPart")
+            local head = player.Character:FindFirstChild("Torso")
             if head then
                 -- restore safely
-                if props.Size then pcall(function() HumanoidRootPart.Size = props.Size end) end
-                if props.Transparency ~= nil then pcall(function() HumanoidRootPart.Transparency = props.Transparency end) end
-                if props.BrickColor then pcall(function() HumanoidRootPart.BrickColor = props.BrickColor end) end
-                if props.Material then pcall(function() HumanoidRootPart.Material = props.Material end) end
-                if props.CanCollide ~= nil then pcall(function() HumanoidRootPart.CanCollide = props.CanCollide end) end
-                if props.Massless ~= nil then pcall(function() HumanoidRootPart.Massless = props.Massless end) end
+                if props.Size then pcall(function() Torso.Size = props.Size end) end
+                if props.Transparency ~= nil then pcall(function() Torso.Transparency = props.Transparency end) end
+                if props.BrickColor then pcall(function() Torso.BrickColor = props.BrickColor end) end
+                if props.Material then pcall(function() Torso.Material = props.Material end) end
+                if props.CanCollide ~= nil then pcall(function() Torso.CanCollide = props.CanCollide end) end
+                if props.Massless ~= nil then pcall(function() Torso.Massless = props.Massless end) end
             end
         end
-        savedHumanoidRootPartProps[uid] = nil
+        savedTorsoProps[uid] = nil
     end)
 end
 
 local function applyHitboxToPlayer(player, sizeValue, transValue)
     pcall(function()
         if not player or player == LocalPlayer or not player.Character then return end
-        local HumanoidRootPart = player.Character:FindFirstChild("HumanoidRootPart")
-        if not HumanoidRootPart then return end
-        saveHumanoidRootPartProps(player)
-        HumanoidRootPart.Size = Vector3.new(sizeValue, sizeValue, sizeValue)
-        HumanoidRootPart.Transparency = transValue
+        local Torso = player.Character:FindFirstChild("Torso")
+        if not Torso then return end
+        saveTorsoProps(player)
+        Torso.Size = Vector3.new(sizeValue, sizeValue, sizeValue)
+        Torso.Transparency = transValue
         -- optional styling:
-        pcall(function() HumanoidRootPart.BrickColor = BrickColor.new("Really red") end)
-        pcall(function() HumanoidRootPart.Material = Enum.Material.Neon end)
-        pcall(function() HumanoidRootPart.CanCollide = false end)
-        pcall(function() HumanoidRootPart.Massless = true end)
+        pcall(function() Torso.BrickColor = BrickColor.new("Really red") end)
+        pcall(function() Torso.Material = Enum.Material.Neon end)
+        pcall(function() Torso.CanCollide = false end)
+        pcall(function() Torso.Massless = true end)
     end)
 end
 
@@ -80,7 +80,7 @@ end)
 
 -- When players leave, restore their head
 Players.PlayerRemoving:Connect(function(pl)
-    restoreHumanoidRootPartProps(pl)
+    restoreProps(pl)
 end)
 
 -- Ensure when a new player spawns we apply the hitbox after their character exists
@@ -103,7 +103,7 @@ local function cleanup()
     end
     -- restore any saved heads
     for _, pl in ipairs(Players:GetPlayers()) do
-        restoreHumanoidRootPartProps(pl)
+        restoreTorsoProps(pl)
     end
 end
 
@@ -141,7 +141,7 @@ local ESP = {
     },
     Drawing = {
         Chams = {
-            Enabled  = false,
+            Enabled  = true,
             Thermal = false,
             FillRGB = Color3.fromRGB(119, 120, 255),
             Fill_Transparency = 100,
@@ -305,8 +305,8 @@ do -- Initalize
             end
             --
             Connection = Euphoria.RunService.RenderStepped:Connect(function()
-                if plr.Character and plr.Character:FindFirstChild("HumanoidRootPart") then
-                    local HRP = plr.Character.HumanoidRootPart
+                if plr.Character and plr.Character:FindFirstChild("") then
+                    local HRP = plr.Character.
                     local Humanoid = plr.Character:WaitForChild("Humanoid");
                     local Pos, OnScreen = Cam:WorldToScreenPoint(HRP.Position)
                     local Dist = (Cam.CFrame.Position - HRP.Position).Magnitude / 3.5714285714
@@ -341,7 +341,7 @@ do -- Initalize
                         end
 
                         -- Teamcheck
-                        if ESP.TeamCheck and plr ~= lplayer and ((lplayer.Team ~= plr.Team and plr.Team) or (not lplayer.Team and not plr.Team)) and plr.Character and plr.Character:FindFirstChild("HumanoidRootPart") and plr.Character:FindFirstChild("Humanoid") then
+                        if ESP.TeamCheck and plr ~= lplayer and ((lplayer.Team ~= plr.Team and plr.Team) or (not lplayer.Team and not plr.Team)) and plr.Character and plr.Character:FindFirstChild("") and plr.Character:FindFirstChild("Humanoid") then
 
                             do -- Chams
                                 Chams.Adornee = plr.Character
