@@ -6,8 +6,8 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "RHO-36 CLIENT",
    Icon = 17360965159,
-   LoadingTitle = "RHO 36 CLIENT",
-   LoadingSubtitle = "Makes you Maikweo v2",
+   LoadingTitle = "RHO-36 Client",
+   LoadingSubtitle = "Jade complete aim.",
    Theme = "DarkBlue",
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false,
@@ -104,13 +104,26 @@ local ESPToggle = MainTab:CreateToggle({
 
 -- Aimbot
 MainTab:CreateToggle({
-   Name = "Aimlock [R.Click]",
+   Name = "Aimlock [Circle]",
    CurrentValue = false,
    Flag = "AimbotToggle",
    Callback = function(Value)
         if Value then
             local Aimbot = loadstring(game:HttpGet("https://raw.githubusercontent.com/36breacher-prog/aimlckkig/refs/heads/main/Aimbot1.lua"))()
             Aimbot.Load()
+        end
+   end,
+})
+
+-- Aimboo
+MainTab:CreateToggle({
+   Name = "Aimlock [No Circle]",
+   CurrentValue = false,
+   Flag = "AimbooToggle",
+   Callback = function(Value)
+        if Value then
+            local Aimboo = loadstring(game:HttpGet("https://raw.githubusercontent.com/36breacher-prog/aimlckkig/refs/heads/main/Aimbot2.lua"))()
+            Aimboo.Load()
         end
    end,
 })
@@ -316,6 +329,7 @@ MiscTab:CreateButton({
         })
     end
 })
+
 
 
 
