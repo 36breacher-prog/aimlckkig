@@ -4,67 +4,67 @@ local RunService = game:GetService("RunService")
 
 local LocalPlayer = Players.LocalPlayer
 
-local HITBOX_SIZE = 5.5
-local HITBOX_TRANSPARENCY = 0.75
+local HITBOX_SIZE = 7
+local HITBOX_TRANSPARENCY = 0.49
 
 -- Store original head properties so we can restore them later
 -- keyed by player.UserId
-local savedHumanoidRootPartProps = {}
+local savedLowerTorsoProps = {}
 
-local function saveHumanoidRootPartProps(player)
+local function saveLowerTorsoProps(player)
     pcall(function()
         if not player or not player.Character then return end
-        local UpperTorso  = player.Character:FindFirstChild("UpperTorso")
-        if not UpperTorso  then return end
+        local head = player.Character:FindFirstChild("LowerTorso")
+        if not head then return end
         local uid = player.UserId
-        if not savedHeadProps[uid] then
-            savedHeadProps[uid] = {
-                Size = UpperTorso.Size,
-                Transparency = UpperTorso.Transparency,
-                BrickColor = UpperTorso.BrickColor,
-                Material = UpperTorso.Material,
-                CanCollide = UpperTorso.CanCollide,
-                Massless = UpperTorso.Massless,
+        if not savedLowerTorsoProps[uid] then
+            savedLowerTorsoProps[uid] = {
+                Size = head.Size,
+                Transparency = head.Transparency,
+                BrickColor = head.BrickColor,
+                Material = head.Material,
+                CanCollide = head.CanCollide,
+                Massless = head.Massless,
             }
         end
     end)
 end
 
-local function restoreUpperTorsoProps(player)
+local function restoreLowerTorsoProps(player)
     pcall(function()
         if not player then return end
         local uid = player.UserId
-        local props = savedUpperTorsoProps[uid]
+        local props = savedLowerTorsoProps[uid]
         if not props then return end
         if player.Character then
-            local head = player.Character:FindFirstChild("UpperTorso")
+            local head = player.Character:FindFirstChild("LowerTorso")
             if head then
                 -- restore safely
-                if props.Size then pcall(function() UpperTorso.Size = props.Size end) end
-                if props.Transparency ~= nil then pcall(function() UpperTorso.Transparency = props.Transparency end) end
-                if props.BrickColor then pcall(function() UpperTorso.BrickColor = props.BrickColor end) end
-                if props.Material then pcall(function() UpperTorso.Material = props.Material end) end
-                if props.CanCollide ~= nil then pcall(function() UpperTorso.CanCollide = props.CanCollide end) end
-                if props.Massless ~= nil then pcall(function() UpperTorso.Massless = props.Massless end) end
+                if props.Size then pcall(function() head.Size = props.Size end) end
+                if props.Transparency ~= nil then pcall(function() head.Transparency = props.Transparency end) end
+                if props.BrickColor then pcall(function() head.BrickColor = props.BrickColor end) end
+                if props.Material then pcall(function() head.Material = props.Material end) end
+                if props.CanCollide ~= nil then pcall(function() head.CanCollide = props.CanCollide end) end
+                if props.Massless ~= nil then pcall(function() head.Massless = props.Massless end) end
             end
         end
-        savedUpperTorsoProps[uid] = nil
+        savedLowerTorsoProps[uid] = nil
     end)
 end
 
 local function applyHitboxToPlayer(player, sizeValue, transValue)
     pcall(function()
         if not player or player == LocalPlayer or not player.Character then return end
-        local UpperTorso = player.Character:FindFirstChild("UpperTorso")
-        if not UpperTorso then return end
-        saveUpperTorsoProps(player)
-        UpperTorso.Size = Vector3.new(sizeValue, sizeValue, sizeValue)
-        UpperTorso.Transparency = transValue
+        local head = player.Character:FindFirstChild("LowerTorso")
+        if not head then return end
+        saveLowerTorsoProps(player)
+        head.Size = Vector3.new(sizeValue, sizeValue, sizeValue)
+        head.Transparency = transValue
         -- optional styling:
-        pcall(function() UpperTorso.BrickColor = BrickColor.new("Really red") end)
-        pcall(function() UpperTorso.Material = Enum.Material.Neon end)
-        pcall(function() UpperTorso.CanCollide = false end)
-        pcall(function() UpperTorso.Massless = true end)
+        pcall(function() head.BrickColor = BrickColor.new("Really red") end)
+        pcall(function() head.Material = Enum.Material.Neon end)
+        pcall(function() head.CanCollide = false end)
+        pcall(function() head.Massless = true end)
     end)
 end
 
@@ -80,7 +80,7 @@ end)
 
 -- When players leave, restore their head
 Players.PlayerRemoving:Connect(function(pl)
-    restoreUpperTorsoProps(pl)
+    restoreLowerTorsoProps(pl)
 end)
 
 -- Ensure when a new player spawns we apply the hitbox after their character exists
@@ -103,7 +103,7 @@ local function cleanup()
     end
     -- restore any saved heads
     for _, pl in ipairs(Players:GetPlayers()) do
-        restoreUpperTorsoProps(pl)
+        restoreLowerTorsoProps(pl)
     end
 end
 
@@ -141,54 +141,54 @@ local ESP = {
     },
     Drawing = {
         Chams = {
-            Enabled  = false,
-            Thermal = false,
+            Enabled  = true,
+            Thermal = true,
             FillRGB = Color3.fromRGB(119, 120, 255),
             Fill_Transparency = 100,
             OutlineRGB = Color3.fromRGB(119, 120, 255),
             Outline_Transparency = 100,
-            VisibleCheck = false,
+            VisibleCheck = true,
         },
         Names = {
-            Enabled = false,
+            Enabled = true,
             RGB = Color3.fromRGB(255, 255, 255),
         },
         Flags = {
-            Enabled = false,
+            Enabled = true,
         },
         Distances = {
-            Enabled = false, 
+            Enabled = true, 
             Position = "Text",
             RGB = Color3.fromRGB(255, 255, 255),
         },
         Weapons = {
-            Enabled = false, WeaponTextRGB = Color3.fromRGB(119, 120, 255),
+            Enabled = true, WeaponTextRGB = Color3.fromRGB(119, 120, 255),
             Outlined = false,
             Gradient = false,
             GradientRGB1 = Color3.fromRGB(255, 255, 255), GradientRGB2 = Color3.fromRGB(119, 120, 255),
         },
         Healthbar = {
-            Enabled = false,  
-            HealthText = true, Lerp = false, HealthTextRGB = Color3.fromRGB(0, 0, 255),
+            Enabled = true,  
+            HealthText = true, Lerp = false, HealthTextRGB = Color3.fromRGB(119, 120, 255),
             Width = 2.5,
-            Gradient = false, GradientRGB1 = Color3.fromRGB(200, 0, 0), GradientRGB2 = Color3.fromRGB(60, 60, 125), GradientRGB3 = Color3.fromRGB(119, 120, 255), 
+            Gradient = true, GradientRGB1 = Color3.fromRGB(200, 0, 0), GradientRGB2 = Color3.fromRGB(60, 60, 125), GradientRGB3 = Color3.fromRGB(119, 120, 255), 
         },
         Boxes = {
-            Animate = false,
+            Animate = true,
             RotationSpeed = 300,
             Gradient = false, GradientRGB1 = Color3.fromRGB(119, 120, 255), GradientRGB2 = Color3.fromRGB(0, 0, 0), 
-            GradientFill = false, GradientFillRGB1 = Color3.fromRGB(119, 120, 255), GradientFillRGB2 = Color3.fromRGB(0, 0, 0), 
+            GradientFill = true, GradientFillRGB1 = Color3.fromRGB(119, 120, 255), GradientFillRGB2 = Color3.fromRGB(0, 0, 0), 
             Filled = {
-                Enabled = false,
+                Enabled = true,
                 Transparency = 0.75,
                 RGB = Color3.fromRGB(0, 0, 0),
             },
             Full = {
-                Enabled = false,
+                Enabled = true,
                 RGB = Color3.fromRGB(255, 255, 255),
             },
             Corner = {
-                Enabled = false,
+                Enabled = true,
                 RGB = Color3.fromRGB(255, 255, 255),
             },
         };
@@ -205,6 +205,28 @@ local lplayer = Players.LocalPlayer;
 local camera = game.Workspace.CurrentCamera;
 local Cam = Workspace.CurrentCamera;
 local RotationAngle, Tick = -45, tick();
+
+-- Weapon Images
+local Weapon_Icons = {
+    ["Wooden Bow"] = "http://www.roblox.com/asset/?id=17677465400",
+    ["Crossbow"] = "http://www.roblox.com/asset/?id=17677473017",
+    ["Salvaged SMG"] = "http://www.roblox.com/asset/?id=17677463033",
+    ["Salvaged AK47"] = "http://www.roblox.com/asset/?id=17677455113",
+    ["Salvaged AK74u"] = "http://www.roblox.com/asset/?id=17677442346",
+    ["Salvaged M14"] = "http://www.roblox.com/asset/?id=17677444642",
+    ["Salvaged Python"] = "http://www.roblox.com/asset/?id=17677451737",
+    ["Military PKM"] = "http://www.roblox.com/asset/?id=17677449448",
+    ["Military M4A1"] = "http://www.roblox.com/asset/?id=17677479536",
+    ["Bruno's M4A1"] = "http://www.roblox.com/asset/?id=17677471185",
+    ["Military Barrett"] = "http://www.roblox.com/asset/?id=17677482998",
+    ["Salvaged Skorpion"] = "http://www.roblox.com/asset/?id=17677459658",
+    ["Salvaged Pump Action"] = "http://www.roblox.com/asset/?id=17677457186",
+    ["Military AA12"] = "http://www.roblox.com/asset/?id=17677475227",
+    ["Salvaged Break Action"] = "http://www.roblox.com/asset/?id=17677468751",
+    ["Salvaged Pipe Rifle"] = "http://www.roblox.com/asset/?id=17677468751",
+    ["Salvaged P250"] = "http://www.roblox.com/asset/?id=17677447257",
+    ["Nail Gun"] = "http://www.roblox.com/asset/?id=17677484756"
+};
 
 -- Functions
 local Functions = {}
@@ -305,7 +327,7 @@ do -- Initalize
             end
             --
             Connection = Euphoria.RunService.RenderStepped:Connect(function()
-                if plr.Character and plr.Character:FindFirstChild("UpperTorso") then
+                if plr.Character and plr.Character:FindFirstChild("HumanoidRootPart") then
                     local HRP = plr.Character.HumanoidRootPart
                     local Humanoid = plr.Character:WaitForChild("Humanoid");
                     local Pos, OnScreen = Cam:WorldToScreenPoint(HRP.Position)
