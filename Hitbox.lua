@@ -4,7 +4,7 @@ local RunService = game:GetService("RunService")
 
 local LocalPlayer = Players.LocalPlayer
 
-local HITBOX_SIZE = 7
+local HITBOX_SIZE = 5.5
 local HITBOX_TRANSPARENCY = 0.75
 
 -- Store original head properties so we can restore them later
@@ -150,25 +150,25 @@ local ESP = {
             VisibleCheck = false,
         },
         Names = {
-            Enabled = true,
+            Enabled = false,
             RGB = Color3.fromRGB(255, 255, 255),
         },
         Flags = {
-            Enabled = true,
+            Enabled = false,
         },
         Distances = {
-            Enabled = true, 
+            Enabled = false, 
             Position = "Text",
             RGB = Color3.fromRGB(255, 255, 255),
         },
         Weapons = {
-            Enabled = true, WeaponTextRGB = Color3.fromRGB(119, 120, 255),
+            Enabled = false, WeaponTextRGB = Color3.fromRGB(119, 120, 255),
             Outlined = false,
             Gradient = false,
             GradientRGB1 = Color3.fromRGB(255, 255, 255), GradientRGB2 = Color3.fromRGB(119, 120, 255),
         },
         Healthbar = {
-            Enabled = true,  
+            Enabled = false,  
             HealthText = true, Lerp = false, HealthTextRGB = Color3.fromRGB(0, 0, 255),
             Width = 2.5,
             Gradient = false, GradientRGB1 = Color3.fromRGB(200, 0, 0), GradientRGB2 = Color3.fromRGB(60, 60, 125), GradientRGB3 = Color3.fromRGB(119, 120, 255), 
