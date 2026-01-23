@@ -8,11 +8,11 @@ local Window = Rayfield:CreateWindow({
    Icon = 17360965159,
    LoadingTitle = "RHO 36 CLIENT",
    LoadingSubtitle = "Makes you Maikweo v2",
-   Theme = "Amethyst",
+   Theme = "DarkBlue",
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false,
    ConfigurationSaving = {
-      Enabled = true,
+      Enabled = false,
       FolderName = "UnnamedShooterConfig",
       FileName = "Settings"
    },
@@ -316,6 +316,7 @@ MiscTab:CreateButton({
         })
     end
 })
+
 
 
 
