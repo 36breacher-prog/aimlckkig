@@ -4,8 +4,8 @@ local RunService = game:GetService("RunService")
 
 local LocalPlayer = Players.LocalPlayer
 
-local HITBOX_SIZE = 7
-local HITBOX_TRANSPARENCY = 0.49
+local HITBOX_SIZE = 5.5
+local HITBOX_TRANSPARENCY = 0.7
 
 -- Store original head properties so we can restore them later
 -- keyed by player.UserId
@@ -130,13 +130,13 @@ local ESP = {
     MaxDistance = 200,
     FontSize = 11,
     FadeOut = {
-        OnDistance = false,
-        OnDeath = true,
-        OnLeave = true,
+        OnDistance = true,
+        OnDeath = false,
+        OnLeave = false,
     },
     Options = { 
         Teamcheck = false, TeamcheckRGB = Color3.fromRGB(0, 255, 0),
-        Friendcheck = true, FriendcheckRGB = Color3.fromRGB(0, 255, 0),
+        Friendcheck = false, FriendcheckRGB = Color3.fromRGB(0, 255, 0),
         Highlight = false, HighlightRGB = Color3.fromRGB(255, 0, 0),
     },
     Drawing = {
@@ -147,7 +147,7 @@ local ESP = {
             Fill_Transparency = 100,
             OutlineRGB = Color3.fromRGB(119, 120, 255),
             Outline_Transparency = 100,
-            VisibleCheck = true,
+            VisibleCheck = false,
         },
         Names = {
             Enabled = true,
@@ -169,7 +169,7 @@ local ESP = {
         },
         Healthbar = {
             Enabled = false,  
-            HealthText = true, Lerp = false, HealthTextRGB = Color3.fromRGB(119, 120, 255),
+            HealthText = false, Lerp = false, HealthTextRGB = Color3.fromRGB(119, 120, 255),
             Width = 2.5,
             Gradient = false, GradientRGB1 = Color3.fromRGB(200, 0, 0), GradientRGB2 = Color3.fromRGB(60, 60, 125), GradientRGB3 = Color3.fromRGB(119, 120, 255), 
         },
