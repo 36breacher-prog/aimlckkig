@@ -98,7 +98,7 @@ getgenv().ExunysDeveloperAimbot = {
 
 		TeamCheck = false,
 		AliveCheck = true,
-		WallCheck = false,
+		WallCheck = true,
 
 		OffsetToMoveDirection = false,
 		OffsetIncrement = 1,
@@ -118,7 +118,7 @@ getgenv().ExunysDeveloperAimbot = {
 		Visible = true,
 
 		Radius = 120,
-		NumSides = 60,
+		NumSides = 4,
 
 		Thickness = 1,
 		Transparency = 1,
