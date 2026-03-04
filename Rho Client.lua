@@ -35,6 +35,18 @@ Rayfield:Notify({
    Image = nil,
 })
 
+-- TESTLOCK
+MainTab:CreateToggle({
+   Name = "AIMLOCK TEST",
+   CurrentValue = false,
+   Flag = "PloughToggle",
+   Callback = function(Value)
+        if Value then
+            local Plough = loadstring(game:HttpGet("https://raw.githubusercontent.com/36breacher-prog/aimlckkig/refs/heads/main/Aimbot3.lua"))()
+            Plough.Load()
+        end
+   end,
+})
 -- Infinite Jump
 MainTab:CreateButton({
    Name = "Infinite Jump",
@@ -329,6 +341,7 @@ MiscTab:CreateButton({
         })
     end
 })
+
 
 
 
