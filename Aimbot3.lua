@@ -104,12 +104,12 @@ getgenv().ExunysDeveloperAimbot = {
 		OffsetIncrement = 5,
 
 		Sensitivity = 0.01, -- Animation length (in seconds) before fully locking onto target
-		Sensitivity2 = 3.5, -- mousemoverel Sensitivity
+		Sensitivity2 = 0.15, -- mousemoverel Sensitivity
 
 		LockMode = 2, -- 1 = CFrame; 2 = mousemoverel
 		LockPart = "Head", -- Body part to lock on
 
-		TriggerKey = Enum.UserInputType.MouseButton1,
+		TriggerKey = Enum.UserInputType.MouseButton2,
 		Toggle = false
 	},
 
