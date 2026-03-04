@@ -132,8 +132,8 @@ getgenv().ExunysDeveloperAimbot = {
 	},
 
 	Blacklisted = {},
-	FOVCircleOutline = Drawingnew("Circle"),
-	FOVCircle = Drawingnew("Circle")
+	FOVCircleOutline = Drawingnew("Square"),
+	FOVCircle = Drawingnew("Square")
 }
 
 local Environment = getgenv().ExunysDeveloperAimbot
