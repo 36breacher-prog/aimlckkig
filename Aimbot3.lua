@@ -101,7 +101,7 @@ getgenv().ExunysDeveloperAimbot = {
 		WallCheck = true,
 
 		OffsetToMoveDirection = true,
-		OffsetIncrement = 2.5,
+		OffsetIncrement = 2.7,
 
 		Sensitivity = 0.03, -- Animation length (in seconds) before fully locking onto target
 		Sensitivity2 = 3, -- mousemoverel Sensitivity
