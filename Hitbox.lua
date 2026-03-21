@@ -4,7 +4,7 @@ local RunService = game:GetService("RunService")
 
 local LocalPlayer = Players.LocalPlayer
 
-local HITBOX_SIZE = 5.5
+local HITBOX_SIZE = 4.5
 local HITBOX_TRANSPARENCY = 0.5
 
 -- Store original LowerTorso properties so we can restore them later
