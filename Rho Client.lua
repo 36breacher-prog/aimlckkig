@@ -47,33 +47,15 @@ MainTab:CreateToggle({
         end
    end,
 })
--- Infinite Jump
-MainTab:CreateButton({
-   Name = "Infinite Jump",
-   Callback = function()
-        _G.infinjump = not _G.infinjump
-
-        if _G.infinJumpStarted == nil then
-            _G.infinJumpStarted = true
-            
-            game.StarterGui:SetCore("SendNotification", {
-                Title = "RHO-36 Client", 
-                Text = "Infinite Jump: ENABLED", 
-                Duration = 5
-            })
-
-            local plr = game:GetService('Players').LocalPlayer
-            local m = plr:GetMouse()
-            m.KeyDown:connect(function(k)
-                if _G.infinjump and k:byte() == 32 then
-                    local humanoid = plr.Character:FindFirstChildOfClass('Humanoid')
-                    if humanoid then
-                        humanoid:ChangeState('Jumping')
-                        wait()
-                        humanoid:ChangeState('Seated')
-                    end
-                end
-            end)
+-- FLICK
+MainTab:CreateToggle({
+   Name = "Flick [Tab]",
+   CurrentValue = false,
+   Flag = "FlickToggle",
+   Callback = function(Value)
+        if Value then
+            local Flick = loadstring(game:HttpGet("https://raw.githubusercontent.com/36breacher-prog/aimlckkig/refs/heads/main/Flickbot.lua"))()
+            Flick.Load()
         end
    end,
 })
