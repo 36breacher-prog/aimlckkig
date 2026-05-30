@@ -192,7 +192,7 @@ MiscTab:CreateButton({
 MiscTab:CreateButton({
     Name = "Duality Movement Menu [Key: nissan23]",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SecuredProfitss/Duality/refs/heads/main/dokidoki"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/axleoislost/Accent/main/Rivals"))()
         Rayfield:Notify({
             Title = "Duality Loaded",
             Content = "KEY: nissan23",
