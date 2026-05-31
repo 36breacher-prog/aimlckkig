@@ -4,8 +4,8 @@ local RunService = game:GetService("RunService")
 
 local LocalPlayer = Players.LocalPlayer
 
-local HITBOX_SIZE = 4.5
-local HITBOX_TRANSPARENCY = 0.5
+local HITBOX_SIZE = 4
+local HITBOX_TRANSPARENCY = 1
 
 -- Store original LowerTorso properties so we can restore them later
 -- keyed by player.UserId
@@ -125,7 +125,7 @@ end)
 local Workspace, RunService, Players, CoreGui, Lighting = cloneref(game:GetService("Workspace")), cloneref(game:GetService("RunService")), cloneref(game:GetService("Players")), game:GetService("CoreGui"), cloneref(game:GetService("Lighting"))
 
 local ESP = {
-    Enabled = true,
+    Enabled = false,
     TeamCheck = true,
     MaxDistance = 200,
     FontSize = 11,
