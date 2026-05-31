@@ -37,7 +37,7 @@ Rayfield:Notify({
 
 -- TESTLOCK
 MainTab:CreateToggle({
-   Name = "Aimlock V2 [RClick]",
+   Name = "Aimlock V2 [E]",
    CurrentValue = false,
    Flag = "PloughToggle",
    Callback = function(Value)
