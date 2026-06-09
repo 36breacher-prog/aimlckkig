@@ -103,7 +103,7 @@ getgenv().ExunysDeveloperAimbot = {
 		OffsetToMoveDirection = true,
 		OffsetIncrement = 4,
 
-		Sensitivity = 0.01, -- Animation length (in seconds) before fully locking onto target
+		Sensitivity = 0.05, -- Animation length (in seconds) before fully locking onto target
 		Sensitivity2 = 3, -- mousemoverel Sensitivity
 
 		LockMode = 2, -- 1 = CFrame; 2 = mousemoverel
