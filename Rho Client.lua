@@ -122,6 +122,19 @@ MainTab:CreateToggle({
    end,
 })
 
+-- Aimbot Blatant
+MainTab:CreateToggle({
+   Name = "Aimlock Blatant [E]",
+   CurrentValue = false,
+   Flag = "AimboossToggle",
+   Callback = function(Value)
+        if Value then
+            local Aimbooss = loadstring(game:HttpGet("https://raw.githubusercontent.com/36breacher-prog/aimlckkig/refs/heads/main/Aimbot4.lua"))()
+            Aimbooss.Load()
+        end
+   end,
+})
+
 -- AutoReload
 MainTab:CreateToggle({
    Name = "AutoReload",
